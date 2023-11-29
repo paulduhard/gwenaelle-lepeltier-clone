@@ -1,4 +1,5 @@
 <script>
+	import "../app.css";
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
@@ -21,7 +22,10 @@
 	{/if}
 </svelte:head>
 
+<header class="md:mx-auto py-4 md:px-24 md:flex md:items-center md:justify-between">
+    <!-- <img src="/svg/logo-v1.svg" class="w-60"> -->
 	<Nav links={data.nav.data.links} />
+</header>
 
 <main>
 	<slot />
@@ -29,23 +33,36 @@
 <PrismicPreview {repositoryName} />
 
 <section>
-	<footer>
-		<p>© {new Date().getFullYear()}</p>
-	</footer>
+	<footer class="md:mx-auto md:px-24 border-t-2 py-16 flex flex-col items-center">
+        <!-- <img src="/images/logo-couleur.png" class="w-5/12" alt="logo"> -->
+    <div class="flex justify-center gap-24">
+        <nav>
+            <ul class="lowercase">
+                <li>Psycho-Praticien</li>
+                <li>Art-Thérapeute</li>
+                <li>Prendre Rendez-vous</li>
+            </ul>
+        </nav>
+        <div class="infos-contact text-right">
+            <div class="adresse">53 rue du Refuge,<br>13200 Arles</div>
+            <div class="telephone">06 87 27 92 93</div> 
+        </div>
+    </div>
+</footer>
 </section>
 
 <style>
 	@import "open-props/style";
 	@import "open-props/gray-hsl";
 
-	@font-face {
+	/* @font-face {
 		font-family: "Anton";
 		font-style: "normal";
 		font-weight: 100 900;
 		font-display: swap;
 		src: local(""), url("/anton.woff2") format("woff2");
 		unicode-range: U+20-7E, U+E4, U+E5, U+F6;
-	}
+	} */
 
 	:root {
 		--brand: var(--red-6);
@@ -76,8 +93,15 @@
 	}
 
 	/* Set fonts */
-	:global(html) {
-		--font-serif: 'Anton';
-		font-family: var(--font-sans);
+	@font-face {
+    font-family: "forma-djr-deck", sans-serif;
+    /* font-weight: 500; */
+    /* font-style: normal; */
+}
+	@font-face {
+		font-family: "latienne-pro", serif;
+		/* font-weight: 400; */
+		/* font-style: italic; */
 	}
+
 </style>

@@ -22,19 +22,23 @@
 
 <style>
 :global(h1) {
+	font-family: "forma-djr-deck";
 	font-size: var(--font-size-6);
 	font-style: italic;
 	font-weight: var(--font-weight-2);
 	text-align: center;
 }
 :global(h2) {
+	font-family: "forma-djr-deck, sans-serif";
+	font-size: var(--font-size-4);
 	font-style: italic;
 	font-weight: var(--font-weight-2);
 	text-align: center;
 }
-.text {
+:global(p) {
 	width: 100%;
-	max-width: var(--size-content-3);
+	font-family: "latienne-pro, serif";
+	font-size: var(--font-size-2);
 	line-height: var(--font-lineheight-2);
 	font-weight: var(--font-weight-4);
 }

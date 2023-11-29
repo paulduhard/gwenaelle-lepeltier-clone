@@ -45,7 +45,7 @@
         </nav>
         <div class="infos-contact text-right">
             <div class="adresse">53 rue du Refuge,<br>13200 Arles</div>
-            <div class="telephone">06 87 27 92 93</div> 
+            <div class="telephone">06 87 27 97 93</div> 
         </div>
     </div>
 </footer>

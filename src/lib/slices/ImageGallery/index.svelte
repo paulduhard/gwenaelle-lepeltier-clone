@@ -30,10 +30,17 @@
 </section>
 
 <style>
+	section :global(img) {
+		object-fit: cover;
+	}
 /* 3 images */
 @media (max-width: 768px) {
 		.three_img :global(img:first-child) {
 			grid-column: 1 / -1;
+		}
+		.three_img :global(img:nth-child(2)),
+		.three_img :global(img:nth-child(3)) {
+			aspect-ratio: 3/4;
 		}
 	}
 
@@ -43,9 +50,6 @@
 	.four_img :global(img:last-child) {
 		grid-column: 1 / -1;
 	}
-}
-.four_img :global(img) {
-	object-fit: cover;
 }
 
 @media (max-width: 768px) {

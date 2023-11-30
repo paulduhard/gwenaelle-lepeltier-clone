@@ -36,43 +36,5 @@
 				"value": []
 			}
 		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "headerText",
-		"primary": {
-			"title": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Dropped"
-						}
-					}
-				]
-			},
-			"content": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Sint eu ex velit do incididunt adipisicing id laborum. Eu ad dolore adipisicing laboris veniam consequat irure fugiat anim laboris."
-						}
-					}
-				]
-			},
-			"two_columns": {
-				"__TYPE__": "BooleanContent",
-				"value": true
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
 	}
 ]

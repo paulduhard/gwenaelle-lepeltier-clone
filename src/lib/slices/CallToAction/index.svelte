@@ -10,7 +10,7 @@
 
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<div class="cta mt-8 mb-24 flex flex-col justify-center items-center gap-6 md:flex-row">
+	<div class="cta mt-12 mb-24 flex flex-col justify-center items-center gap-6 md:flex-row md:gap-32">
 			{#each slice.items as cta, index}
 			<PrismicLink field={cta.link_url}>{cta.link_label}</PrismicLink>
 			{/each }

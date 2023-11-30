@@ -608,58 +608,9 @@ export type RichTextSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *RichText → Primary*
- */
-export interface RichTextSliceHeaderTextPrimary {
-	/**
-	 * Title field in *RichText → Primary*
-	 *
-	 * - **Field Type**: Title
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.title
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	title: prismic.TitleField;
-
-	/**
-	 * Content field in *RichText → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: Lorem ipsum...
-	 * - **API ID Path**: rich_text.primary.content
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	content: prismic.RichTextField;
-
-	/**
-	 * Two Columns field in *RichText → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: rich_text.primary.two_columns
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	two_columns: prismic.BooleanField;
-}
-
-/**
- * headerText variation for RichText Slice
- *
- * - **API ID**: `headerText`
- * - **Description**: RichText
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type RichTextSliceHeaderText = prismic.SharedSliceVariation<
-	'headerText',
-	Simplify<RichTextSliceHeaderTextPrimary>,
-	never
->;
-
-/**
  * Slice variation for *RichText*
  */
-type RichTextSliceVariation = RichTextSliceDefault | RichTextSliceHeaderText;
+type RichTextSliceVariation = RichTextSliceDefault;
 
 /**
  * RichText Shared Slice
@@ -711,10 +662,8 @@ declare module '@prismicio/client' {
 			ImageGallerySlice4X,
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
-			RichTextSliceHeaderTextPrimary,
 			RichTextSliceVariation,
-			RichTextSliceDefault,
-			RichTextSliceHeaderText
+			RichTextSliceDefault
 		};
 	}
 }

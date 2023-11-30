@@ -6,8 +6,8 @@
 	export let slice;
 </script>
 
-<section class="container">
-	<div class="h2">
+<section class="richtext mt-8 mx-8">
+	<div class="h2 mb-8">
 		<PrismicRichText field={slice.primary.title} />
 	</div>
 	<div class="text">
@@ -21,25 +21,18 @@
 </section>
 
 <style>
-:global(h1) {
-	font-family: "forma-djr-deck";
-	font-size: var(--font-size-6);
-	font-style: italic;
-	font-weight: var(--font-weight-2);
-	text-align: center;
-}
-:global(h2) {
+.richtext :global(h2) {
 	font-family: "forma-djr-deck, sans-serif";
 	font-size: var(--font-size-4);
 	font-style: italic;
-	font-weight: var(--font-weight-2);
+	font-weight: var(--font-weight-1);
 	text-align: center;
 }
-:global(p) {
-	width: 100%;
+.richtext :global(p) {
 	font-family: "latienne-pro, serif";
-	font-size: var(--font-size-2);
+	font-size: var(--font-size-1);
 	line-height: var(--font-lineheight-2);
 	font-weight: var(--font-weight-4);
+	margin-bottom: 1rem;
 }
 </style>

@@ -35,13 +35,14 @@
     left: 0;
     bottom: 0;
     width: 0;
-    transition: bottom 0.2s ease;
+    transition: top .2s ease-in, bottom .2s ease-in;
     border-bottom: 1px solid black;
     }
 
     li :global(a:hover::after) {
     width: 100%;
-    bottom: -5px;
+    bottom: -6px;
+	top: -5px;
     }
 
 	@media (max-width: 600px) {

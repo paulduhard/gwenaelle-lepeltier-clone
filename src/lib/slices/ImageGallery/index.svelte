@@ -14,24 +14,59 @@
 		<PrismicImage field={slice.primary.image2} />
 	</div>
 	{:else if slice.variation === '3X'}
-	<div class="three_img grid grid-cols-2 md:grid-flow-col gap-2">
+	<div class="three_img grid grid-cols-2 md:grid-cols-3 gap-2">
 		<PrismicImage field={slice.primary.image} />
 		<PrismicImage field={slice.primary.image2} />
 		<PrismicImage field={slice.primary.image3} />
 	</div>
 	{:else if slice.variation === '4X'}
-	<div class="three_img grid grid-cols-2 md:grid-flow-col gap-2">
-	<PrismicImage field={slice.primary.image} />
-	<PrismicImage field={slice.primary.image2} />
-	<PrismicImage field={slice.primary.image3} />
-	<PrismicImage field={slice.primary.image4} />
+	<div class="four_img grid grid-cols-2 md:grid-cols-2 gap-2">
+			<PrismicImage field={slice.primary.image} />
+			<PrismicImage field={slice.primary.image2} />
+			<PrismicImage field={slice.primary.image3} />
+			<PrismicImage field={slice.primary.image4} />
 	</div>
 	{/if}
 </section>
 
 <style>
-	.three_img :global(img:first-child) {
-		grid-column: 1 / -1;
+/* 3 images */
+@media (max-width: 768px) {
+		.three_img :global(img:first-child) {
+			grid-column: 1 / -1;
+		}
 	}
 
+/* 4 images */
+@media (max-width: 768px) {
+	.four_img :global(img:first-child),
+	.four_img :global(img:last-child) {
+		grid-column: 1 / -1;
+	}
+}
+.four_img :global(img) {
+	object-fit: cover;
+}
+
+@media (max-width: 768px) {
+	.four_img :global(img:nth-child(1)),
+	.four_img :global(img:nth-child(4)) {
+		aspect-ratio: 18/9;
+	}
+	.four_img :global(img:nth-child(2)),
+	.four_img :global(img:nth-child(3)) {
+		aspect-ratio: 3/4;
+	}
+}
+
+@media (min-width: 768px) {
+	.four_img :global(img:nth-child(1)),
+	.four_img :global(img:nth-child(2)) {
+		aspect-ratio: 18/9;
+	}
+	.four_img :global(img:nth-child(3)),
+	.four_img :global(img:nth-child(4)) {
+		aspect-ratio: 5/4;
+	}
+}
 </style>

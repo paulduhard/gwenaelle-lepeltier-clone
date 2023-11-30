@@ -6,11 +6,11 @@
 	export let slice;
 </script>
 
-<section class="richtext mt-8 mx-8">
-	<div class="h2 mb-4">
+<section class="richtext mt-8 mb-8 mx-8 md:flex">
+	<div class="h2 mb-4 basis-1/2">
 		<PrismicRichText field={slice.primary.title} />
 	</div>
-	<div class="text">
+	<div class="text basis-1/2">
 		<PrismicRichText
 		field={slice.primary.content}
 		components={{

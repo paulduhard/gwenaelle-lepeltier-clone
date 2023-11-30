@@ -23,7 +23,7 @@
 </svelte:head>
 
 <header class="px-8 py-4 md:flex md:items-center md:justify-between shadow bg-white top-0 w-full sticky z-10">
-	<a href="/"class="after:none">
+	<a href="/">
 		<img src="/svg/logo-v1.svg" class="w-48 md:w-60">
 	</a>
 		<Nav links={data.nav.data.links} />
@@ -36,8 +36,10 @@
 
 <section>
 	<footer class="md:mx-auto md:px-24 border-t-2 py-16 flex flex-col items-center">
-        <img src="/images/logo-couleur.png" alt="logo" class="px-3">
-    <div class="flex gap-8">
+		<a href="/">
+			<img src="/images/logo-couleur.png" alt="logo" class="w-80">
+		</a>
+		<div class="flex gap-8">
         <nav>
             <ul>
                 <li>Psycho-Praticien</li>
@@ -67,7 +69,7 @@
 	}
 
 	footer :global(img) {
-		width: 85vw;
+		/* max-width: 85vw; */
 	}
 	footer :global(li), footer :global(p) {
 	font-family: "forma-djr-deck", sans-serif;

@@ -258,16 +258,6 @@ export type CallToActionSlice = prismic.SharedSlice<'call_to_action', CallToActi
  */
 export interface HeroSectionSliceDefaultPrimary {
 	/**
-	 * Logo field in *Hero → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_section.primary.logo
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	logo: prismic.ImageField<never>;
-
-	/**
 	 * Title field in *Hero → Primary*
 	 *
 	 * - **Field Type**: Rich Text
@@ -323,9 +313,68 @@ export type HeroSectionSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSectionSliceHomepageHeroPrimary {
+	/**
+	 * Logo field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.logo
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+
+	/**
+	 * Description field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Image field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * Split field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: hero_section.primary.split
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	split: prismic.BooleanField;
+}
+
+/**
+ * with logo variation for Hero Slice
+ *
+ * - **API ID**: `homepageHero`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSectionSliceHomepageHero = prismic.SharedSliceVariation<
+	'homepageHero',
+	Simplify<HeroSectionSliceHomepageHeroPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *Hero*
  */
-type HeroSectionSliceVariation = HeroSectionSliceDefault;
+type HeroSectionSliceVariation = HeroSectionSliceDefault | HeroSectionSliceHomepageHero;
 
 /**
  * Hero Shared Slice
@@ -543,8 +592,10 @@ declare module '@prismicio/client' {
 			CallToActionSliceDefault,
 			HeroSectionSlice,
 			HeroSectionSliceDefaultPrimary,
+			HeroSectionSliceHomepageHeroPrimary,
 			HeroSectionSliceVariation,
 			HeroSectionSliceDefault,
+			HeroSectionSliceHomepageHero,
 			ImageGallerySlice,
 			ImageGallerySliceDefaultPrimary,
 			ImageGallerySlice2XPrimary,

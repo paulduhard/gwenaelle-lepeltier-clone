@@ -14,7 +14,12 @@ import { PrismicImage } from "@prismicio/svelte";
 	
 	<section class="mx-1 mb-20" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 		<div class="my-4">
-			<div class="logo"><PrismicImage field={slice.primary.logo} /></div>
+			{#if slice.variation === 'default'}
+				<PrismicRichText field={slice.primary.title} />
+			{/if}
+				<div class="logo">
+					<PrismicImage field={slice.primary.logo} />
+				</div>
 		</div>
 		<PrismicRichText field={slice.primary.description} />
 	</section>
@@ -30,6 +35,14 @@ import { PrismicImage } from "@prismicio/svelte";
 	.logo :global(img) {
 		height: fit-content;
 	}
+
+	.hero :global(h1) {
+	font-family: "forma-djr-deck, sans-serif";
+	font-size: var(--font-size-4);
+	font-style: italic;
+	font-weight: var(--font-weight-1);
+	text-align: center;
+}
 	
 	.hero :global(em) {
 		font-family: "latienne-pro", serif;

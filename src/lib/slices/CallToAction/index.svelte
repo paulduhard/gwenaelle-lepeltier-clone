@@ -25,7 +25,7 @@
         text-decoration: none;
 	}
 
-	:global(a::after) {
+	.cta :global(a::after) {
     content: "";
     position: absolute;
     left: 10%;

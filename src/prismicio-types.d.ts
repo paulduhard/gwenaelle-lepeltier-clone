@@ -60,7 +60,11 @@ export type NavDocument<Lang extends string = string> = prismic.PrismicDocumentW
 	Lang
 >;
 
-type PageDocumentDataSlicesSlice = HeroSectionSlice | CallToActionSlice | RichTextSlice;
+type PageDocumentDataSlicesSlice =
+	| ImageGallerySlice
+	| HeroSectionSlice
+	| CallToActionSlice
+	| RichTextSlice;
 
 /**
  * Content for Page documents
@@ -276,27 +280,6 @@ export interface HeroSectionSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	description: prismic.RichTextField;
-
-	/**
-	 * Image field in *Hero → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_section.primary.image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	image: prismic.ImageField<never>;
-
-	/**
-	 * Split field in *Hero → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: hero_section.primary.split
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	split: prismic.BooleanField;
 }
 
 /**

@@ -38,9 +38,8 @@ import { PrismicImage } from "@prismicio/svelte";
 
 	.hero :global(h1) {
 	font-family: "forma-djr-deck, sans-serif";
-	font-size: var(--font-size-4);
+	font-size: var(--font-size-5);
 	font-style: italic;
-	font-weight: var(--font-weight-1);
 	text-align: center;
 }
 	
@@ -52,6 +51,7 @@ import { PrismicImage } from "@prismicio/svelte";
 	
 	.hero :global(p) {
 		margin-bottom: 1rem;
+		/* border-left: 1px solid black; */
 	}
 
 	.two_columns {

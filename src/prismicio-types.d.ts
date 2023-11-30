@@ -409,6 +409,16 @@ export interface ImageGallerySlice2XPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
+
+	/**
+	 * Image field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image2
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image2: prismic.ImageField<never>;
 }
 
 /**
@@ -425,9 +435,119 @@ export type ImageGallerySlice2X = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *ImageGallery → Primary*
+ */
+export interface ImageGallerySlice3XPrimary {
+	/**
+	 * Image field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * Image field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image2
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image2: prismic.ImageField<never>;
+
+	/**
+	 * Image3 field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image3
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image3: prismic.ImageField<never>;
+}
+
+/**
+ * 3x variation for ImageGallery Slice
+ *
+ * - **API ID**: `3X`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageGallerySlice3X = prismic.SharedSliceVariation<
+	'3X',
+	Simplify<ImageGallerySlice3XPrimary>,
+	never
+>;
+
+/**
+ * Primary content in *ImageGallery → Primary*
+ */
+export interface ImageGallerySlice4XPrimary {
+	/**
+	 * Image field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * Image field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image2
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image2: prismic.ImageField<never>;
+
+	/**
+	 * Image3 field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image3
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image3: prismic.ImageField<never>;
+
+	/**
+	 * Image4 field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image4
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image4: prismic.ImageField<never>;
+}
+
+/**
+ * 4x variation for ImageGallery Slice
+ *
+ * - **API ID**: `4X`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageGallerySlice4X = prismic.SharedSliceVariation<
+	'4X',
+	Simplify<ImageGallerySlice4XPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *ImageGallery*
  */
-type ImageGallerySliceVariation = ImageGallerySliceDefault | ImageGallerySlice2X;
+type ImageGallerySliceVariation =
+	| ImageGallerySliceDefault
+	| ImageGallerySlice2X
+	| ImageGallerySlice3X
+	| ImageGallerySlice4X;
 
 /**
  * ImageGallery Shared Slice
@@ -582,9 +702,13 @@ declare module '@prismicio/client' {
 			ImageGallerySlice,
 			ImageGallerySliceDefaultPrimary,
 			ImageGallerySlice2XPrimary,
+			ImageGallerySlice3XPrimary,
+			ImageGallerySlice4XPrimary,
 			ImageGallerySliceVariation,
 			ImageGallerySliceDefault,
 			ImageGallerySlice2X,
+			ImageGallerySlice3X,
+			ImageGallerySlice4X,
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceHeaderTextPrimary,

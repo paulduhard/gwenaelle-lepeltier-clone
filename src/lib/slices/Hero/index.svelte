@@ -9,29 +9,36 @@ import { PrismicImage } from "@prismicio/svelte";
 	$: two_columns = slice.primary.two_columns;
 </script>
 
-<div class="hero" class:two_columns>
-	<PrismicImage field={slice.primary.image} />
+<section class="hero mt-8 mx-8" class:two_columns>
+		<PrismicImage field={slice.primary.image} />
 	
-	<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-		<PrismicRichText field={slice.primary.title} />
+	<section class="mx-1 mb-20" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+		<div class="my-4">
+			<div class="logo"><PrismicImage field={slice.primary.logo} /></div>
+		</div>
 		<PrismicRichText field={slice.primary.description} />
 	</section>
-</div>
+</section>
 
 
 <style>
-	:global(img) {
-		width: 100%;
-		height: auto;
-		aspect-ratio: 9/16;
+	.hero :global(img) {
+		height: 50vh;
 		object-fit: cover;
-		margin-top: var(--size-9);
-		padding-inline: var(--size-6);
+	}
+
+	.logo :global(img) {
+		height: fit-content;
 	}
 	
-	:global(section) {
-		padding-inline: var(--size-6);
-		margin-bottom: var(--size-9);
+	.hero :global(em) {
+		font-family: "latienne-pro", serif;
+		font-weight: 600;
+		letter-spacing: 2px;
+	}
+	
+	.hero :global(p) {
+		margin-bottom: 1rem;
 	}
 
 	.two_columns {

@@ -12,7 +12,7 @@
 
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<div class="cta">
+	<div class="cta mt-8 mb-24">
 			{#each slice.items as cta, index}
 			<PrismicLink field={cta.link_url}>{cta.link_label}</PrismicLink>
 			

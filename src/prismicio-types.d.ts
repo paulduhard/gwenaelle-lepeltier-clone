@@ -258,14 +258,24 @@ export type CallToActionSlice = prismic.SharedSlice<'call_to_action', CallToActi
  */
 export interface HeroSectionSliceDefaultPrimary {
 	/**
+	 * Logo field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.logo
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+
+	/**
 	 * Title field in *Hero → Primary*
 	 *
-	 * - **Field Type**: Title
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: hero_section.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	title: prismic.TitleField;
+	title: prismic.RichTextField;
 
 	/**
 	 * Description field in *Hero → Primary*

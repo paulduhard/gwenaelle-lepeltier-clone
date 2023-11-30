@@ -337,15 +337,15 @@ type HeroSectionSliceVariation = HeroSectionSliceDefault;
 export type HeroSectionSlice = prismic.SharedSlice<'hero_section', HeroSectionSliceVariation>;
 
 /**
- * Primary content in *ImageGallery → Items*
+ * Primary content in *ImageGallery → Primary*
  */
-export interface ImageGallerySliceDefaultItem {
+export interface ImageGallerySliceDefaultPrimary {
 	/**
-	 * Image field in *ImageGallery → Items*
+	 * Image field in *ImageGallery → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_gallery.items[].image
+	 * - **API ID Path**: image_gallery.primary.image
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
@@ -360,14 +360,42 @@ export interface ImageGallerySliceDefaultItem {
  */
 export type ImageGallerySliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Record<string, never>,
-	Simplify<ImageGallerySliceDefaultItem>
+	Simplify<ImageGallerySliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Primary content in *ImageGallery → Primary*
+ */
+export interface ImageGallerySlice2XPrimary {
+	/**
+	 * Image field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * 2x variation for ImageGallery Slice
+ *
+ * - **API ID**: `2X`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageGallerySlice2X = prismic.SharedSliceVariation<
+	'2X',
+	Simplify<ImageGallerySlice2XPrimary>,
+	never
 >;
 
 /**
  * Slice variation for *ImageGallery*
  */
-type ImageGallerySliceVariation = ImageGallerySliceDefault;
+type ImageGallerySliceVariation = ImageGallerySliceDefault | ImageGallerySlice2X;
 
 /**
  * ImageGallery Shared Slice
@@ -518,9 +546,11 @@ declare module '@prismicio/client' {
 			HeroSectionSliceVariation,
 			HeroSectionSliceDefault,
 			ImageGallerySlice,
-			ImageGallerySliceDefaultItem,
+			ImageGallerySliceDefaultPrimary,
+			ImageGallerySlice2XPrimary,
 			ImageGallerySliceVariation,
 			ImageGallerySliceDefault,
+			ImageGallerySlice2X,
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceHeaderTextPrimary,

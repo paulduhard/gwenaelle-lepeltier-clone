@@ -11,8 +11,7 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {},
-      "items": {
+      "primary": {
         "image": {
           "type": "Image",
           "config": {
@@ -21,7 +20,27 @@
             "thumbnails": []
           }
         }
-      }
+      },
+      "items": {}
+    },
+    {
+      "id": "2X",
+      "name": "2x",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

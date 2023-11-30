@@ -22,8 +22,8 @@
 	{/if}
 </svelte:head>
 
-<header class="md:mx-auto py-4 md:px-24 md:flex md:items-center md:justify-between">
-    <!-- <img src="/svg/logo-v1.svg" class="w-60"> -->
+<header class="px-8 py-4 md:flex md:items-center md:justify-between shadow bg-white top-0 w-full sticky z-10">
+    <img src="/svg/logo-v1.svg" class="w-48 md:w-60">
 	<Nav links={data.nav.data.links} />
 </header>
 
@@ -62,6 +62,10 @@
 		font-family: "latienne-pro";
 		src: url('https://use.typekit.net/vku2jdv.css2') format('woff2'),
 			 url('https://use.typekit.net/vku2jdv.css') format('woff');
+	}
+
+	header {
+		/* position: sticky; */
 	}
 
 	footer :global(img) {

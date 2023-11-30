@@ -5,7 +5,7 @@
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mx-8">
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mx-8 mb-20 last:mb-2">
 	{#if slice.variation === 'default'}
 			<PrismicImage field={slice.primary.image} />
 	{:else if slice.variation === '2X'}
@@ -33,6 +33,7 @@
 	section :global(img) {
 		object-fit: cover;
 	}
+	
 /* 3 images */
 @media (max-width: 768px) {
 		.three_img :global(img:first-child) {

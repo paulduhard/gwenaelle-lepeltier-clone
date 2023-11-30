@@ -7,7 +7,7 @@
 </script>
 
 <section class="richtext mt-8 mx-8">
-	<div class="h2 mb-8">
+	<div class="h2 mb-4">
 		<PrismicRichText field={slice.primary.title} />
 	</div>
 	<div class="text">

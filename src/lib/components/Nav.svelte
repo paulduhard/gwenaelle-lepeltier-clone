@@ -5,8 +5,8 @@
 	export let links;
 </script>
 
-<nav class="header-nav">
-	<ul>
+<nav class="header-nav ">
+	<ul class="flex justify-end gap-8">
 		{#each links as link}
 			<li>
 				<PrismicLink field={link.link}>{link.label}</PrismicLink>
@@ -16,34 +16,14 @@
 </nav>
 
 <style>
-	nav {
-		position: fixed;
-		background: white;
-		z-index: 1;
-		top: 0;
-		width: 100%;
-		padding: var(--size-4);
-		box-shadow: var(--shadow-1);
-	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		justify-content: space-around;
-		font-size: var(--font-size-1);
-		text-transform: uppercase;
-		font-weight: var(--font-weight-5);
-		color: var(--text-1);
-	}
-
 	li :global(a) {
-		color: var(--text-2);
         position: relative;
         text-decoration: none;
 		text-transform: lowercase;
-	}
+		font-family: "forma-djr-deck", sans-serif;
+		font-size: .9rem;
+		font-weight: 300;
+		}
 
 	li :global(a:hover) {
         text-decoration: none;

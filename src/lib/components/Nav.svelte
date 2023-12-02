@@ -20,7 +20,6 @@
         position: relative;
         text-decoration: none;
 		text-transform: lowercase;
-		font-family: "forma-djr-deck", sans-serif;
 		font-size: .9rem;
 		font-weight: 300;
 		}

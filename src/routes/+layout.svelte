@@ -22,7 +22,7 @@
 	{/if}
 </svelte:head>
 
-<header class="px-8 py-4 md:flex md:items-center md:justify-between shadow bg-white top-0 w-full sticky z-10">
+<header class="sticky top-0 z-10 w-full px-8 py-4 bg-white shadow md:flex md:items-center md:justify-between">
 	<a href="/">
 		<img src="/svg/logo-v1.svg" class="w-48 md:w-60">
 	</a>
@@ -35,7 +35,7 @@
 <PrismicPreview {repositoryName} />
 
 <section>
-	<footer class="md:mx-auto md:px-24 border-t-2 py-16 flex flex-col items-center">
+	<footer class="flex flex-col items-center py-16 border-t-2 md:mx-auto md:px-24">
 		<a href="/">
 			<img src="/images/logo-couleur.png" alt="logo" class="w-80">
 		</a>
@@ -47,7 +47,7 @@
                 <li>Prendre rendez-vous</li>
             </ul>
         </nav>
-        <div class="infos-contact text-right">
+        <div class="text-right infos-contact">
             <p class="adresse">53 rue du Refuge,<br>13200 Arles</p>
             <p class="telephone">06 87 27 97 93</p> 
         </div>
@@ -57,22 +57,11 @@
 
 <style>
 	@import "open-props/style";
-	@font-face {
-		font-family: "forma-djr-deck";
-		src: url('https://use.typekit.net/vku2jdv.css') format('woff2'),
-			 url('https://use.typekit.net/vku2jdv.css') format('woff');
-	}
-	@font-face {
-		font-family: "latienne-pro";
-		src: url('https://use.typekit.net/vku2jdv.css2') format('woff2'),
-			 url('https://use.typekit.net/vku2jdv.css') format('woff');
-	}
 
 	footer :global(img) {
 		/* max-width: 85vw; */
 	}
 	footer :global(li), footer :global(p) {
-	font-family: "forma-djr-deck", sans-serif;
 	font-size: .9rem;
 	font-weight: 300;
 }

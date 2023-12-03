@@ -42,21 +42,6 @@ import { PrismicImage } from "@prismicio/svelte";
 		height: fit-content;
 	}
 
-	.hero :global(h1) {
-	font-size: var(--font-size-5);
-	font-style: italic;
-	text-align: center;
-	}
-	
-	.hero :global(p) {
-		margin-bottom: 1rem;
-		/* border-left: 1px solid black; */
-	}
-
-	.hero :global(p:last-child) {
-		margin-bottom: 0;
-	}
-
 	.two_columns {
 		display: flex;
 	}

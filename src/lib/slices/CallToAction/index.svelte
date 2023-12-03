@@ -19,7 +19,6 @@
 
  <style>
 	:global(a) {
-		color: var(--text-2);
         position: relative;
         text-decoration: none;
 	}

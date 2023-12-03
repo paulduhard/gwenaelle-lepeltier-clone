@@ -2,19 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	font-size: clamp(0.8125rem, 0.6625rem + 0.75vw, 1.5625rem);
+	font-family: "forma-djr-deck", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
 h1,
-h2 { font-family: "latienne-pro", serif }
-
-
-p,
-a,
-li,
-li a { font-family: "forma-djr-deck", sans-serif; }
-
 h2 {
-	font-size: 2rem;
+	font-family: "latienne-pro", serif;
 	font-style: italic;
+	font-size: 2rem;
+	font-weight: 400;
 	text-align: center;
 }
 
 p { margin-bottom: 1rem; }
+
+p:last-child {
+	margin-bottom: 0;
+}

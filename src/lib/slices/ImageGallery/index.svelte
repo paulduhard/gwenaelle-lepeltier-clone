@@ -9,18 +9,18 @@
 	{#if slice.variation === 'default'}
 			<PrismicImage field={slice.primary.image} />
 	{:else if slice.variation === '2X'}
-	<div class="two_img grid md:grid-flow-col gap-2">
+	<div class="grid gap-2 two_img md:grid-flow-col">
 		<PrismicImage field={slice.primary.image} />
 		<PrismicImage field={slice.primary.image2} />
 	</div>
 	{:else if slice.variation === '3X'}
-	<div class="three_img grid grid-cols-2 md:grid-cols-3 gap-2">
+	<div class="grid grid-cols-2 gap-2 three_img md:grid-cols-3">
 		<PrismicImage field={slice.primary.image} />
 		<PrismicImage field={slice.primary.image2} />
 		<PrismicImage field={slice.primary.image3} />
 	</div>
 	{:else if slice.variation === '4X'}
-	<div class="four_img grid grid-cols-2 md:grid-cols-2 gap-2">
+	<div class="grid grid-cols-2 gap-2 four_img md:grid-cols-2">
 			<PrismicImage field={slice.primary.image} />
 			<PrismicImage field={slice.primary.image2} />
 			<PrismicImage field={slice.primary.image3} />
@@ -71,7 +71,7 @@
 	}
 	.four_img :global(img:nth-child(3)),
 	.four_img :global(img:nth-child(4)) {
-		aspect-ratio: 5/4;
+		aspect-ratio: 6/4;
 	}
 }
 </style>

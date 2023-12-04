@@ -32,7 +32,7 @@ import { PrismicImage } from "@prismicio/svelte";
 
 <style>
 	.hero :global(img) {
-		height: 50vh;
+		/* height: 50vh; */
 		object-fit: cover;
 	}
 

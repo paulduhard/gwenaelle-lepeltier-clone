@@ -1,12 +1,13 @@
 <script>
 	import { PrismicLink } from '@prismicio/svelte';
+	import { fly } from 'svelte/transition';
 
 	/** @type {import('../../prismicio-types').NavDocumentData['links']} */
 	export let links;
 </script>
 
-<nav class="header-nav ">
-	<ul class="flex justify-end gap-8">
+<nav class="header-nav">
+	<ul class="flex justify-end gap-8"  transition:fly={{ y: -15, delay: 250 }}>
 		{#each links as link}
 			<li>
 				<PrismicLink field={link.link}>{link.label}</PrismicLink>
@@ -52,9 +53,6 @@
 	} */
 
 	@media (max-width: 600px) {
-		.header-nav li{
-			/* display: none; */
-		}
 		.header-nav ul {
 			padding-block: 2rem;
 			display: flex;

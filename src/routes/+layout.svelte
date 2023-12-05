@@ -4,9 +4,14 @@
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
 	import Nav from '$lib/components/Nav.svelte';
+	import { Hamburger } from 'svelte-hamburgers';
+
+	let open;
 
 	export let data;
 </script>
+
+<Hamburger bind:open />
 
 <svelte:head>
 	<title>{$page.data.title}</title>
@@ -26,8 +31,10 @@
 	<a href="/">
 		<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72">
 	</a>
-		<Nav links={data.nav.data.links} />
 </header>
+	{#if open}
+		<Nav links={data.nav.data.links} />
+	{/if}
 
 <main>
 	<slot />
@@ -58,6 +65,20 @@
 <style>
 	@import "open-props/style";
 
+	:global(.hamburger) {
+		position: fixed;
+		right: 2.3rem;
+		z-index: 100;
+	}
+	
+	:global(.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after) {
+		width: 40px !important;
+		height: 3px !important;
+	}
+
+	:global(.hamburger-inner::before) { background-color: #757FCA !important; }
+	:global(.hamburger-inner) { background-color: #F47553 !important; }
+	:global(.hamburger-inner::after) { background-color: #CCC700 !important; }
 	footer :global(img) {
 		/* max-width: 85vw; */
 	}

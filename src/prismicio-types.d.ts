@@ -344,9 +344,85 @@ export type HeroSectionSliceHomepageHero = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSectionSliceContactPageHeroPrimary {
+	/**
+	 * Logo field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.logo
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+
+	/**
+	 * Description field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Image field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *Hero → Items*
+ */
+export interface HeroSectionSliceContactPageHeroItem {
+	/**
+	 * Link Url field in *Hero → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.items[].link_url
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link_url: prismic.LinkField;
+
+	/**
+	 * Link Label field in *Hero → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.items[].link_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	link_label: prismic.KeyTextField;
+}
+
+/**
+ * ContactPageHero variation for Hero Slice
+ *
+ * - **API ID**: `contactPageHero`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSectionSliceContactPageHero = prismic.SharedSliceVariation<
+	'contactPageHero',
+	Simplify<HeroSectionSliceContactPageHeroPrimary>,
+	Simplify<HeroSectionSliceContactPageHeroItem>
+>;
+
+/**
  * Slice variation for *Hero*
  */
-type HeroSectionSliceVariation = HeroSectionSliceDefault | HeroSectionSliceHomepageHero;
+type HeroSectionSliceVariation =
+	| HeroSectionSliceDefault
+	| HeroSectionSliceHomepageHero
+	| HeroSectionSliceContactPageHero;
 
 /**
  * Hero Shared Slice
@@ -664,9 +740,12 @@ declare module '@prismicio/client' {
 			HeroSectionSlice,
 			HeroSectionSliceDefaultPrimary,
 			HeroSectionSliceHomepageHeroPrimary,
+			HeroSectionSliceContactPageHeroPrimary,
+			HeroSectionSliceContactPageHeroItem,
 			HeroSectionSliceVariation,
 			HeroSectionSliceDefault,
 			HeroSectionSliceHomepageHero,
+			HeroSectionSliceContactPageHero,
 			ImageGallerySlice,
 			ImageGallerySliceDefaultPrimary,
 			ImageGallerySlice2XPrimary,

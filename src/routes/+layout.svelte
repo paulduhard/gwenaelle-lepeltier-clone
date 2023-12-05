@@ -22,9 +22,9 @@
 	{/if}
 </svelte:head>
 
-<header class="sticky top-0 z-10 w-full px-8 py-4 bg-white shadow md:flex md:items-center md:justify-between">
+<header class="sticky top-0 z-10 w-full px-8 py-4 bg-white shadow md:px-20 md:flex md:items-center md:justify-between">
 	<a href="/">
-		<img src="/svg/logo-v1.svg" class="w-48 md:w-60">
+		<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72">
 	</a>
 		<Nav links={data.nav.data.links} />
 </header>
@@ -64,5 +64,5 @@
 	footer :global(li), footer :global(p) {
 	font-size: .7rem;
 	font-weight: 300;
-}
+	}
 </style>

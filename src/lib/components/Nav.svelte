@@ -20,7 +20,7 @@
         position: relative;
         text-decoration: none;
 		text-transform: lowercase;
-		font-size: .9rem;
+		font-size: 1rem;
 		font-weight: 300;
 		}
 
@@ -44,9 +44,33 @@
 	top: -5px;
     }
 
+	/* Make the same border-bottom when we are on the current page */
+	/* li :global(a.active::after) {
+		width: 100%;
+		bottom: -6px;
+		top: -5px;
+	} */
+
 	@media (max-width: 600px) {
-	.header-nav li{
-        display: none;
-    }
-}
+		.header-nav li{
+			/* display: none; */
+		}
+		.header-nav ul {
+			padding-block: 2rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		li :global(a::after) {
+		content: "";
+		position: absolute;
+		left: 50%;
+  		transform: translateX(-50%);
+		bottom: -5px;
+		width: 4rem;
+		transition: top .2s ease-in, bottom .2s ease-in;
+		border-bottom: 1px solid black;
+		}
+	}
 </style>

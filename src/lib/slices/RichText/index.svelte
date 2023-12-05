@@ -7,7 +7,7 @@
 </script>
 
 {#if slice.variation === 'default'}
-<section class="mx-8 mt-8 mb-6 richtext md:flex">
+<section class="mx-8 mt-8 mb-6 richText richtext md:flex">
 	<div class="mb-7 h2 basis-1/2 md:self-center">
 		<PrismicRichText field={slice.primary.title} />
 	</div>
@@ -21,7 +21,7 @@
 </div>
 </section>
 {:else if slice.variation === 'textOnly'}
-<div class="mx-8 mt-8 mb-6 text-center md:px-48">
+<div class="mx-8 mt-8 mb-6 md:text-center md:px-48">
 	<PrismicRichText
 	field={slice.primary.content}
 	components={{

@@ -21,7 +21,7 @@
 </div>
 </section>
 {:else if slice.variation === 'textOnly'}
-<div class="mb-6 text-center md:px-48">
+<div class="mx-8 mt-8 mb-6 text-center md:px-48">
 	<PrismicRichText
 	field={slice.primary.content}
 	components={{

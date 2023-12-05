@@ -23,9 +23,15 @@ import { PrismicImage } from "@prismicio/svelte";
 					<PrismicImage field={slice.primary.logo} />
 				</div>
 		</div>
-		<div class="pl-2 border-l border-neutral-900 md:w-3/5 lg:w-5/6">
-			<PrismicRichText field={slice.primary.description} />
-		</div>
+			{#if slice.variation === 'homepageHero'}
+			<div class="mb-8 md:w-3/5 lg:w-5/6">
+				<PrismicRichText field={slice.primary.description} />
+			</div>
+			{:else if slice.variation === 'default'}
+			<div class="pl-2 border-l border-neutral-900 md:w-3/5 lg:w-5/6">
+				<PrismicRichText field={slice.primary.description} />
+			</div>
+			{/if}
 	</section>
 </section>
 

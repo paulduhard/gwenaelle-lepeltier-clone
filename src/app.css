@@ -4,16 +4,20 @@
 
 body {
 	font-size: clamp(0.8125rem, 0.6625rem + 0.75vw, 1.5625rem);
-	font-family: "forma-djr-deck", sans-serif;
-	font-style: normal;
-	font-weight: 500;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
 }
 
 h1,
 h2 {
 	font-family: "latienne-pro", serif;
 	font-style: italic;
-	font-size: 2rem;
 	font-weight: 400;
 	text-align: center;
 }

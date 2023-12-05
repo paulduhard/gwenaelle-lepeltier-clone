@@ -9,13 +9,13 @@ import { PrismicImage } from "@prismicio/svelte";
 	$: two_columns = slice.primary.two_columns;
 </script>
 
-<section class="mx-8 mt-8 mb-20 hero md:flex md:gap-4" class:two_columns>
-	<div class="flex-shrink">
+<section class="mx-8 mt-10 mb-6 yes hero md:flex md:gap-4" class:two_columns>
+	<div class="flex-shrink hero-img">
 		<PrismicImage field={slice.primary.image} />
 	</div>
 	
 	<section class="justify-between mx-1 md:flex md:flex-col" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-		<div class="my-4">
+		<div class="mb-8">
 			{#if slice.variation === 'default'}
 				<PrismicRichText field={slice.primary.title} />
 			{/if}
@@ -23,7 +23,7 @@ import { PrismicImage } from "@prismicio/svelte";
 					<PrismicImage field={slice.primary.logo} />
 				</div>
 		</div>
-		<div class="md:w-3/5 lg:w-5/6">
+		<div class="pl-2 border-l border-neutral-900 md:w-3/5 lg:w-5/6">
 			<PrismicRichText field={slice.primary.description} />
 		</div>
 	</section>
@@ -31,11 +31,19 @@ import { PrismicImage } from "@prismicio/svelte";
 
 
 <style>
+	.hero :global(p) {
+		font-size: .8rem;
+	}
+
 	.hero :global(img) {
 		/* height: 50vh; */
 		object-fit: cover;
 	}
-
+	
+	.hero-img :global(img) {
+		aspect-ratio: 5/7;
+	}
+	
 	.logo :global(img) {
 		width: 100%;
 		max-width: 500px;

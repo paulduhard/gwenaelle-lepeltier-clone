@@ -35,11 +35,11 @@
 <PrismicPreview {repositoryName} />
 
 <section>
-	<footer class="flex flex-col items-center py-16 border-t-2 md:mx-auto md:px-24">
+	<footer class="flex flex-col items-center py-6 border-t-2 md:mx-auto md:px-24">
 		<a href="/">
-			<img src="/images/logo-couleur.png" alt="logo" class="w-80">
+			<img src="/images/logo-couleur.png" alt="logo" class="w-72">
 		</a>
-		<div class="flex gap-8">
+		<div class="flex gap-20">
         <nav>
             <ul>
                 <li>Psycho-Praticien</li>
@@ -62,7 +62,7 @@
 		/* max-width: 85vw; */
 	}
 	footer :global(li), footer :global(p) {
-	font-size: .9rem;
+	font-size: .7rem;
 	font-weight: 300;
 }
 </style>

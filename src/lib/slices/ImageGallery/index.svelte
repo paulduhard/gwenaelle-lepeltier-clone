@@ -5,22 +5,22 @@
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mx-8 mb-20 last:mb-2">
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mx-8 mb-12">
 	{#if slice.variation === 'default'}
-			<PrismicImage field={slice.primary.image} />
+		<PrismicImage field={slice.primary.image} />
 	{:else if slice.variation === '2X'}
-	<div class="grid gap-2 two_img md:grid-flow-col">
+	<div class="grid gap-3 mb-20 last:mb-5 two_img md:grid-flow-col">
 		<PrismicImage field={slice.primary.image} />
 		<PrismicImage field={slice.primary.image2} />
 	</div>
 	{:else if slice.variation === '3X'}
-	<div class="grid grid-cols-2 gap-2 three_img md:grid-cols-3">
+	<div class="grid grid-cols-2 gap-3 mb-20 last:mb-5 three_img md:grid-cols-3">
 		<PrismicImage field={slice.primary.image} />
 		<PrismicImage field={slice.primary.image2} />
 		<PrismicImage field={slice.primary.image3} />
 	</div>
 	{:else if slice.variation === '4X'}
-	<div class="grid grid-cols-2 gap-2 four_img md:grid-cols-2">
+	<div class="grid grid-cols-2 gap-3 mb-20 last:mb-5 four_img md:grid-cols-2">
 			<PrismicImage field={slice.primary.image} />
 			<PrismicImage field={slice.primary.image2} />
 			<PrismicImage field={slice.primary.image3} />

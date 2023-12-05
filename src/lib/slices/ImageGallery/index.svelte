@@ -5,9 +5,11 @@
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mx-8 mb-12">
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mx-8 md:mx-20">
 	{#if slice.variation === 'default'}
+	<div class="mb-28">
 		<PrismicImage field={slice.primary.image} />
+	</div>
 	{:else if slice.variation === '2X'}
 	<div class="grid gap-3 mb-20 last:mb-5 two_img md:grid-flow-col">
 		<PrismicImage field={slice.primary.image} />

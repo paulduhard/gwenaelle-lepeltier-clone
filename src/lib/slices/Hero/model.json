@@ -6,7 +6,7 @@
   "variations": [
     {
       "id": "default",
-      "name": "Default",
+      "name": "InnerPageHero",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
@@ -35,7 +35,7 @@
     },
     {
       "id": "homepageHero",
-      "name": "with logo",
+      "name": "HomePageHero",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
@@ -64,15 +64,6 @@
             "label": "Image",
             "constraint": {},
             "thumbnails": []
-          }
-        },
-        "split": {
-          "type": "Boolean",
-          "config": {
-            "label": "Split",
-            "placeholder_false": "false",
-            "placeholder_true": "true",
-            "default_value": false
           }
         }
       },

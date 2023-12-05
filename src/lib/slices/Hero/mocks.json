@@ -88,10 +88,6 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
-			},
-			"split": {
-				"__TYPE__": "BooleanContent",
-				"value": true
 			}
 		},
 		"items": [

@@ -283,7 +283,7 @@ export interface HeroSectionSliceDefaultPrimary {
 }
 
 /**
- * Default variation for Hero Slice
+ * InnerPageHero variation for Hero Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -328,21 +328,10 @@ export interface HeroSectionSliceHomepageHeroPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
-
-	/**
-	 * Split field in *Hero → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: hero_section.primary.split
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	split: prismic.BooleanField;
 }
 
 /**
- * with logo variation for Hero Slice
+ * HomePageHero variation for Hero Slice
  *
  * - **API ID**: `homepageHero`
  * - **Description**: Default
@@ -608,9 +597,37 @@ export type RichTextSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *RichText → Primary*
+ */
+export interface RichTextSliceTextOnlyPrimary {
+	/**
+	 * Content field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: Lorem ipsum...
+	 * - **API ID Path**: rich_text.primary.content
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	content: prismic.RichTextField;
+}
+
+/**
+ * textOnly variation for RichText Slice
+ *
+ * - **API ID**: `textOnly`
+ * - **Description**: RichText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RichTextSliceTextOnly = prismic.SharedSliceVariation<
+	'textOnly',
+	Simplify<RichTextSliceTextOnlyPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *RichText*
  */
-type RichTextSliceVariation = RichTextSliceDefault;
+type RichTextSliceVariation = RichTextSliceDefault | RichTextSliceTextOnly;
 
 /**
  * RichText Shared Slice
@@ -662,8 +679,10 @@ declare module '@prismicio/client' {
 			ImageGallerySlice4X,
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
+			RichTextSliceTextOnlyPrimary,
 			RichTextSliceVariation,
-			RichTextSliceDefault
+			RichTextSliceDefault,
+			RichTextSliceTextOnly
 		};
 	}
 }

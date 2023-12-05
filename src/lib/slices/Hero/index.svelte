@@ -1,46 +1,55 @@
 <script>
-
-import { PrismicRichText } from "@prismicio/svelte";
-import { PrismicImage } from "@prismicio/svelte";
+	import { PrismicRichText, PrismicImage } from "@prismicio/svelte";
 
 	/** @type {import("@prismicio/client").Content.HeroSlice} */
 	export let slice;
 
-	$: two_columns = slice.primary.two_columns;
 </script>
 
-<section class="mx-8 mt-10 mb-6 yes hero md:flex md:gap-4" class:two_columns>
-	<div class="flex-shrink hero-img">
-		<PrismicImage field={slice.primary.image} />
-	</div>
-	
-	<section class="justify-between mx-1 md:flex md:flex-col" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-		<div class="mb-8">
-			{#if slice.variation === 'default'}
-				<PrismicRichText field={slice.primary.title} />
-			{/if}
-				<div class="logo">
-					<PrismicImage field={slice.primary.logo} />
-				</div>
+{#if slice.variation === 'homepageHero'}
+	<section class="mx-8 mt-10 mb-6 hero md:flex md:gap-4">
+		<div class="flex-shrink hero-img">
+			<PrismicImage field={slice.primary.image} />
 		</div>
-			{#if slice.variation === 'homepageHero'}
-			<div class="mb-8 md:w-3/5 lg:w-5/6">
-				<PrismicRichText field={slice.primary.description} />
-			</div>
-			{:else if slice.variation === 'default'}
-			<div class="pl-2 border-l border-neutral-900 md:w-3/5 lg:w-5/6">
-				<PrismicRichText field={slice.primary.description} />
-			</div>
-			{/if}
 	</section>
-</section>
-
+	<section class="mx-1 mx-8" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+		<div class="mb-3 logo">
+			<PrismicImage field={slice.primary.logo} />
+		</div>
+		<div class="mb-8 md:basis-2 md:w-3/5 lg:w-5/6">
+			<PrismicRichText field={slice.primary.description} />
+		</div>
+	</section>
+	
+	{:else if slice.variation === 'default'}
+	<section class="mx-8 mt-10 mb-6 mb-8 hero md:mx-20 md:flex" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+		<div class="md:basis-1/2 md:self-center">
+			<PrismicRichText field={slice.primary.title} />
+		</div>
+		<div class="pl-4 border-l md:basis-1/2 md:pr-44 border-neutral-900">
+			<PrismicRichText field={slice.primary.description} />
+		</div>
+	</section>
+{/if}
 
 <style>
+	/* Make this available for tablet and desktop */
+	@media (min-width: 768px) {
+		.hero :global(h1) {
+			font-size: 4.5rem;
+		}
+	}
+	
 	.hero :global(p) {
 		font-size: .8rem;
 	}
 
+	@media (min-width: 768px) {
+		.hero :global(p) {
+			font-size: 1.5rem;
+		}
+	}
+	
 	.hero :global(img) {
 		/* height: 50vh; */
 		object-fit: cover;
@@ -54,9 +63,5 @@ import { PrismicImage } from "@prismicio/svelte";
 		width: 100%;
 		max-width: 500px;
 		height: fit-content;
-	}
-
-	.two_columns {
-		display: flex;
 	}
 </style>

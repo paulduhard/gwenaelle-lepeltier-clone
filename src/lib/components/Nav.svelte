@@ -52,6 +52,8 @@
 		top: -5px;
 	} */
 
+
+	/* MOBILE Header navigation */
 	@media (max-width: 600px) {
 		.header-nav ul {
 			padding-block: 2rem;

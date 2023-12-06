@@ -58,19 +58,12 @@
 			<img src="/images/logo-couleur.png" alt="logo" class="w-72">
 		</a>
 		<div class="flex gap-20">
-			<nav class="flex flex-row footer-nav">
+			<div class="footer-nav">
 				<Nav links={data.nav.data.links} />
-			</nav>
-        <nav>
-            <ul>
-                <li>Psycho-Praticien</li>
-                <li>Art-Thérapeute</li>
-                <li>Prendre rendez-vous</li>
-            </ul>
-        </nav>
+			</div>
         <div class="mb-8 text-right infos-contact">
-            <p class="mb-0 adresse">53 rue du Refuge,<br>13200 Arles</p>
-			<a href="" class="telephone">06 87 27 97 93</a>
+            <a class="block adresse">53 rue du Refuge,<br>13200 Arles</a>
+			<a href="" class="block telephone">06 87 27 97 93</a>
         </div>
     </div>
 	<div class="text-xs footer__copyright">
@@ -80,6 +73,24 @@
 </section>
 
 <style>
+
+.footer-nav :global(ul) {
+		flex-direction: column;
+		gap: .1rem;
+		padding-block: 0 !important;
+		justify-content: flex-start !important;
+	}
+
+	/* Uppercase first-letters for footer navigation */
+	:global(.footer-nav a) { display: inline-block; }
+	:global(.footer-nav a::first-letter) { text-transform: uppercase; }
+	
+	.footer-nav :global(a:hover::after) {
+    width: 100%;
+	top: -5px;
+    }
+
+	/* Burger button */
 	:global(.hamburger) {
 		position: fixed;
 		top: 0;
@@ -95,9 +106,6 @@
 	:global(.hamburger-inner::before) { background-color: #757FCA !important; }
 	:global(.hamburger-inner) { background-color: #F47553 !important; }
 	:global(.hamburger-inner::after) { background-color: #CCC700 !important; }
-	footer :global(img) {
-		/* max-width: 85vw; */
-	}
 
 	/* media query for mobile only */
 	@media (max-width: 768px) {

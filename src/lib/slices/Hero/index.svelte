@@ -8,17 +8,17 @@
 
 {#if slice.variation === 'homepageHero'}
 	<section class="mx-8 mt-10 mb-8 md:mb-20 hero md:flex md:gap-4">
-		<div class="flex-shrink mb-6 md:mb-0 hero-img">
+		<div class="mb-6 mb:w-auto md:basis-1/2 md:mb-0 hero-img">
 			<PrismicImage field={slice.primary.image} />
 		</div>
-		<section class="justify-between mx-1 md:flex md:flex-col" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+		<div class="justify-between mx-1 md:w-auto md:basis-1/2 md:flex md:flex-col" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 			<div class="mb-3 logo">
 				<PrismicImage field={slice.primary.logo} />
 			</div>
-			<div class="md:basis-2 md:w-3/5 lg:w-5/6">
+			<div class="md:pr-40">
 				<PrismicRichText field={slice.primary.description} />
 			</div>
-		</section>
+		</div>
 	</section>
 	
 	<!-- innerPageHero -->

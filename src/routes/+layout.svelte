@@ -71,7 +71,6 @@
 </section>
 
 <style>
-	@import "open-props/style";
 	:global(.hamburger) {
 		position: fixed;
 		top: 0;

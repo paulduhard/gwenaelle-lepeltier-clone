@@ -6,6 +6,9 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
 
+	let currentYear = new Date().getFullYear();
+  	let siteName = "Gwenaelle Lepeltier";
+
 	let open = false;
 
 	export let data;
@@ -65,11 +68,14 @@
                 <li>Prendre rendez-vous</li>
             </ul>
         </nav>
-        <div class="text-right infos-contact">
+        <div class="mb-8 text-right infos-contact">
             <p class="mb-0 adresse">53 rue du Refuge,<br>13200 Arles</p>
-            <p class="telephone">06 87 27 97 93</p> 
+			<a href="" class="telephone">06 87 27 97 93</a>
         </div>
     </div>
+	<div class="text-xs footer__copyright">
+		©{currentYear} {siteName} | tous droits réservés
+	  </div>
 </footer>
 </section>
 
@@ -99,7 +105,7 @@
 			display: none;
 		}
 	}
-	footer :global(li), footer :global(p) {
+	footer :global(li), footer :global(p), footer :global(a) {
 	font-size: .7rem;
 	font-weight: 300;
 	}

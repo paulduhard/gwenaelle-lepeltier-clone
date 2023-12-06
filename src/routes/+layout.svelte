@@ -30,11 +30,15 @@
 	<a href="/">
 	  <img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72">
 	</a>
-	<!-- Display hamburger on mobile -->
+	<!-- Display burger-button on mobile -->
 	<button class="md:hidden">
 	  <Hamburger bind:open />
 	</button>
-	<!-- Display navigation conditionally based on open variable -->
+	<!-- Display on desktop only -->
+	<nav class="desktop-nav">
+		<Nav links={data.nav.data.links} />
+	</nav>
+	<!-- Display navigation on mobile on click -->
 	  {#if open}
 	  <Nav links={data.nav.data.links} />
 	  {/if}
@@ -85,6 +89,13 @@
 	:global(.hamburger-inner::after) { background-color: #CCC700 !important; }
 	footer :global(img) {
 		/* max-width: 85vw; */
+	}
+
+	/* media query for mobile only */
+	@media (max-width: 768px) {
+		.desktop-nav {
+			display: none;
+		}
 	}
 	footer :global(li), footer :global(p) {
 	font-size: .7rem;

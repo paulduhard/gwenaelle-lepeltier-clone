@@ -6,35 +6,39 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
 
-	let open;
+	let open = false;
 
 	export let data;
 </script>
 
-<Hamburger bind:open />
 
 <svelte:head>
 	<title>{$page.data.title}</title>
 	{#if $page.data.meta_description}
-		<meta name="description" content={$page.data.meta_description} />
+	<meta name="description" content={$page.data.meta_description} />
 	{/if}
 	{#if $page.data.meta_title}
-		<meta name="og:title" content={$page.data.meta_title} />
+	<meta name="og:title" content={$page.data.meta_title} />
 	{/if}
 	{#if $page.data.meta_image}
-		<meta name="og:image" content={$page.data.meta_image.url} />
-		<meta name="twitter:card" content="summary_large_image" />
+	<meta name="og:image" content={$page.data.meta_image.url} />
+	<meta name="twitter:card" content="summary_large_image" />
 	{/if}
 </svelte:head>
 
 <header class="sticky top-0 z-10 w-full px-8 py-4 bg-white shadow md:px-20 md:flex md:items-center md:justify-between">
 	<a href="/">
-		<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72">
+	  <img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72">
 	</a>
-</header>
-	{#if open}
-		<Nav links={data.nav.data.links} />
-	{/if}
+	<!-- Display hamburger on mobile -->
+	<button class="md:hidden">
+	  <Hamburger bind:open />
+	</button>
+	<!-- Display navigation conditionally based on open variable -->
+	  {#if open}
+	  <Nav links={data.nav.data.links} />
+	  {/if}
+  </header>
 
 <main>
 	<slot />
@@ -64,9 +68,9 @@
 
 <style>
 	@import "open-props/style";
-
 	:global(.hamburger) {
 		position: fixed;
+		top: 0;
 		right: 2.3rem;
 		z-index: 100;
 	}

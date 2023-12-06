@@ -7,18 +7,18 @@
 </script>
 
 {#if slice.variation === 'homepageHero'}
-	<section class="mx-8 mt-10 mb-6 hero md:flex md:gap-4">
-		<div class="flex-shrink hero-img">
+	<section class="mx-8 mt-10 mb-8 md:mb-20 hero md:flex md:gap-4">
+		<div class="flex-shrink mb-6 md:mb-0 hero-img">
 			<PrismicImage field={slice.primary.image} />
 		</div>
-	</section>
-	<section class="mx-1 mx-8" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-		<div class="mb-3 logo">
-			<PrismicImage field={slice.primary.logo} />
-		</div>
-		<div class="mb-8 md:basis-2 md:w-3/5 lg:w-5/6">
-			<PrismicRichText field={slice.primary.description} />
-		</div>
+		<section class="justify-between mx-1 md:flex md:flex-col" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+			<div class="mb-3 logo">
+				<PrismicImage field={slice.primary.logo} />
+			</div>
+			<div class="md:basis-2 md:w-3/5 lg:w-5/6">
+				<PrismicRichText field={slice.primary.description} />
+			</div>
+		</section>
 	</section>
 	
 	<!-- innerPageHero -->

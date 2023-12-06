@@ -55,6 +55,9 @@
 			<img src="/images/logo-couleur.png" alt="logo" class="w-72">
 		</a>
 		<div class="flex gap-20">
+			<nav class="flex flex-row footer-nav">
+				<Nav links={data.nav.data.links} />
+			</nav>
         <nav>
             <ul>
                 <li>Psycho-Praticien</li>

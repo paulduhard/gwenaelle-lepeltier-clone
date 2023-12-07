@@ -5,9 +5,9 @@
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mx-8 md:mx-20">
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="max-w-screen-2xl mb-28 md:mx-20">
 	{#if slice.variation === 'default'}
-	<div class="mb-28">
+	<div class="">
 		<PrismicImage field={slice.primary.image} />
 	</div>
 	{:else if slice.variation === '2X'}
@@ -33,18 +33,14 @@
 
 <style>
 	section :global(img) {
+		width: 100%;
 		object-fit: cover;
 	}
 	
-/* 3 images */
-@media (max-width: 768px) {
-		.three_img :global(img:first-child) {
-			grid-column: 1 / -1;
-		}
-		.three_img :global(img:nth-child(2)),
-		.three_img :global(img:nth-child(3)) {
-			aspect-ratio: 3/4;
-		}
+	/* 3 images */
+	@media (max-width: 768px) {
+		.three_img :global(img:first-child) { grid-column: 1 / -1; }
+		.three_img :global(img) { aspect-ratio: 3/4; }
 	}
 
 /* 4 images */
@@ -58,7 +54,7 @@
 @media (max-width: 768px) {
 	.four_img :global(img:nth-child(1)),
 	.four_img :global(img:nth-child(4)) {
-		aspect-ratio: 18/9;
+		aspect-ratio: 3/2;
 	}
 	.four_img :global(img:nth-child(2)),
 	.four_img :global(img:nth-child(3)) {

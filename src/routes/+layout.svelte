@@ -29,7 +29,7 @@
 	{/if}
 </svelte:head>
 
-<header class="sticky top-0 z-10 w-full px-8 py-4 mx-auto bg-white max-2xl:border-b max-w-screen-2xl md:flex md:items-center md:justify-between">
+<header class="sticky top-0 z-10 w-full px-8 py-4 mx-auto bg-white max-2xl:border-b max-w-screen-2xl md:flex md:items-center md:justify-between md:px-20">
 		<a href="/">
 			<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72">
 		</a>
@@ -47,7 +47,7 @@
 		{/if}
   </header>
 
-<main class="mx-auto max-w-screen-2xl">
+<main class="mx-8 max-w-screen-2xl">
 	<slot />
 </main>
 <PrismicPreview {repositoryName} />

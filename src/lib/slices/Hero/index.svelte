@@ -7,7 +7,7 @@
 </script>
 
 {#if slice.variation === 'homepageHero'}
-	<section class="mx-8 mt-10 mb-8 md:mb-20 hero md:flex md:gap-4">
+	<section class="mt-10 mb-8 max-w-screen-2xl md:mb-20 md:mx-20 hero md:flex md:gap-4">
 		<div class="mb-6 mb:w-auto md:basis-1/2 md:mb-0 hero-img">
 			<PrismicImage field={slice.primary.image} />
 		</div>
@@ -23,7 +23,7 @@
 	
 	<!-- innerPageHero -->
 	{:else if slice.variation === 'default'}
-		<section class="mx-8 mt-10 mb-6 mb-8 hero md:mx-20 md:flex" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+		<section class="mt-10 mb-6 mb-8 max-w-screen-2xl hero md:mx-20 md:flex" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 			<div class="mb-7 md:basis-1/2 md:self-center">
 				<PrismicRichText field={slice.primary.title} />
 			</div>
@@ -34,7 +34,7 @@
 
 	<!-- contactPageHero -->
 	{:else if slice.variation === 'contactPageHero'}
-	<section class="flex flex-col items-center gap-6 mx-8 mt-10 mb-6 hero">
+	<section class="flex flex-col items-center gap-6 mt-10 mb-6 hero">
 		<div class="flex-shrink w-52 hero-img">
 			<PrismicImage field={slice.primary.image} />
 		</div>

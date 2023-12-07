@@ -4,7 +4,7 @@
 
 
 body {
-	font-size: clamp(0.8125rem, 0.6625rem + 0.75vw, 1.5625rem);
+	/* font-size: clamp(0.8125rem, 0.6625rem + 0.75vw, 1.5625rem); */
 }
 
 h1 {

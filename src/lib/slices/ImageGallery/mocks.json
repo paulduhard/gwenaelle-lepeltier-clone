@@ -1,39 +1,6 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"image": {
-				"__TYPE__": "ImageContent",
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
-					"width": 3810,
-					"height": 5715
-				},
-				"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
-				"width": 3810,
-				"height": 5715,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"thumbnails": {}
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "2X",
 		"primary": {
 			"image": {
@@ -264,6 +231,41 @@
 				},
 				"credits": null,
 				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "dNN9MbZPuzY",
+					"url": "https://images.unsplash.com/photo-1696446700665-1e26fcca574f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MXwxfHNlYXJjaHwxfHxmcnVpdHxlbnwwfHx8fDE3MDE5NTU0Mzd8MA&ixlib=rb-4.0.3&q=85",
+					"width": 6048,
+					"height": 4024
+				},
+				"url": "https://images.unsplash.com/photo-1696446700665-1e26fcca574f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MXwxfHNlYXJjaHwxfHxmcnVpdHxlbnwwfHx8fDE3MDE5NTU0Mzd8MA&ixlib=rb-4.0.3&q=85",
+				"width": 6048,
+				"height": 4024,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"alt": "a man and a woman laying on a blanket with fruit",
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}

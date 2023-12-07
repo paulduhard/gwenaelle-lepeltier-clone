@@ -47,7 +47,7 @@
 		{/if}
   </header>
 
-<main class="mx-8 max-w-screen-2xl">
+<main class="mx-8 mx-auto max-w-screen-2xl">
 	<slot />
 </main>
 <PrismicPreview {repositoryName} />

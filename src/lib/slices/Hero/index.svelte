@@ -27,7 +27,7 @@
 			<div class="mb-7 md:basis-1/2 md:self-center">
 				<PrismicRichText field={slice.primary.title} />
 			</div>
-			<div class="pl-4 border-l md:basis-1/2 md:pr-44 border-neutral-900">
+			<div class="pl-4 border-l md:basis-1/2 md:pr-28 lg:pr-44 border-neutral-900">
 				<PrismicRichText field={slice.primary.description} />
 			</div>
 		</section>
@@ -54,23 +54,6 @@
 
 
 <style>
-	/* Make this available for tablet and desktop */
-	@media (min-width: 768px) {
-		.hero :global(h1) {
-			font-size: 4.5rem;
-		}
-	}
-	
-	.hero :global(p) {
-		font-size: .8rem;
-	}
-
-	@media (min-width: 768px) {
-		.hero :global(p) {
-			font-size: 1.5rem;
-		}
-	}
-	
 	.hero :global(img) {
 		/* height: 50vh; */
 		object-fit: cover;

@@ -104,7 +104,8 @@
     border-bottom: 1px solid black;
     }
 
-	.hero :global(strong) {
+	.hero :global(em) {
+		font-style: normal;
 		text-decoration: underline;
 	}
 </style>

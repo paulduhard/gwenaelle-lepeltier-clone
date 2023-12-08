@@ -34,23 +34,24 @@
 
 	<!-- contactPageHero -->
 	{:else if slice.variation === 'contactPageHero'}
-	<section class="flex flex-col items-center gap-6 mt-10 mb-6 md:items-end md:flex-row md:mx-20 max-w-screen-2xl hero">
-		<div class="flex-shrink md:basis-1/2 w-52 md:max-w-fit hero-img">
+	<section class="flex flex-col items-center gap-6 mt-10 mb-6 md:mt-36 md:items-start md:grid md:grid-cols-2 md:mx-20 max-w-screen-2xl md:mb-96 hero">
+
+		<div class="md:justify-self-end hero-img">
 			<PrismicImage field={slice.primary.image} />
 		</div>
 		
-		<div class="flex flex-col gap-4 mb-8 md:mb-0 md:flex md:flex-col md:basis-1/2">
-		<div class="mb-3 md:justify-self-start logo">
-			<PrismicImage field={slice.primary.logo} />
+		<div class="flex flex-col gap-4 mb-8 md:mb-0">
+			<div class="mb-3 logo">
+				<PrismicImage field={slice.primary.logo} />
 			</div>
-			<!-- CTA -->
+
 			<div class="flex flex-col items-center gap-4 mb-5 md:self-center cta md:flex-row md:gap-32">
 				{#each slice.items as cta, index}
 				<PrismicLink field={cta.link_url}>{cta.link_label}</PrismicLink>
 				{/each }
 			</div>
-			<!-- CTA -->
-			<div class="pl-4 border-l md:basis-1/2 md:pr-44 border-neutral-900">
+
+			<div class="pl-4 border-l md:pr-44 border-neutral-900">
 				<PrismicRichText field={slice.primary.description} />
 			</div>
 		</div>
@@ -60,9 +61,16 @@
 
 <style>
 	.hero :global(img) {
-		/* height: 50vh; */
+		width: 200px;
 		object-fit: cover;
 	}
+
+	@media (min-width: 768px) {
+		.hero :global(img) {
+			width: 400px;
+		}
+	}
+
 	
 	.hero-img :global(img) {
 		aspect-ratio: 5/7;

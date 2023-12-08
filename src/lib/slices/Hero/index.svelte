@@ -27,7 +27,7 @@
 			<div class="mb-7 md:basis-1/2 md:self-center">
 				<PrismicRichText field={slice.primary.title} />
 			</div>
-			<div class="pl-4 border-l md:basis-1/2 md:pr-28 lg:pr-44 border-neutral-900">
+			<div class="pl-4 border-l md:basis-1/2 md:pr-28 lg:pr-44 border-neutral-900 hero-description">
 				<PrismicRichText field={slice.primary.description} />
 			</div>
 		</section>
@@ -41,7 +41,7 @@
 		<div class="mb-3 logo">
 			<PrismicImage field={slice.primary.logo} />
 		</div>
-		<div class="flex flex-col items-center justify-center gap-5 cta md:flex-row md:gap-32">
+		<div class="flex flex-col items-center justify-center gap-5 hero-cta md:flex-row md:gap-32">
 			{#each slice.items as cta, index}
 			<PrismicLink field={cta.link_url}>{cta.link_label}</PrismicLink>
 			{/each }
@@ -55,7 +55,6 @@
 
 <style>
 	.hero :global(img) {
-		/* height: 50vh; */
 		object-fit: cover;
 	}
 	
@@ -69,13 +68,13 @@
 		height: fit-content;
 	}
 
-	:global(a) {
+	.hero-cta :global(a) {
 		font-size: 0.85rem;
         position: relative;
-        text-decoration: none;
+        /* text-decoration: none; */
 	}
 
-	.cta :global(a::after) {
+	.hero-cta :global(a::after) {
     content: "";
     position: absolute;
 	left: 50%;
@@ -87,8 +86,7 @@
     border-bottom: 1px solid black;
     }
 
-	.hero :global(em) {
-		font-style: normal;
-		text-decoration: underline;
+	.hero-description :global(a) {
+		text-decoration: underline !important;
 	}
 </style>

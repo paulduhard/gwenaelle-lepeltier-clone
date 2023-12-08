@@ -18,10 +18,10 @@
 	</section>
 
  <style>
-	:global(a) {
+	.cta :global(a) {
 		font-size: 0.85rem;
         position: relative;
-        text-decoration: none;
+        /* text-decoration: none; */
 	}
 
 	.cta :global(a::after) {

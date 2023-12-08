@@ -40,8 +40,8 @@
 			<PrismicImage field={slice.primary.image} />
 		</div>
 		
-		<div class="flex flex-col self-start gap-16">
-				<div class="md:mb-0 logo">
+		<div class="flex flex-col self-end h-full gap-16">
+				<div class="mb-auto logo">
 					<PrismicImage field={slice.primary.logo} />
 				</div>	
 

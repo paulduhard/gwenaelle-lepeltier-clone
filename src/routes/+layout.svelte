@@ -53,7 +53,7 @@
 <PrismicPreview {repositoryName} />
 
 <section>
-	<footer class="flex flex-col items-center py-6 border-t-2 md:mx-auto md:px-24">
+	<footer class="flex flex-col items-center py-6 mt-20 border-t-2 md:mt-44 md:mx-auto md:px-24">
 		<a href="/">
 			<img src="/images/logo-couleur.png" alt="logo" class="w-72">
 		</a>

@@ -9,7 +9,7 @@
 </script>
 
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mb-32 md:mb-20 max-w-screen-2xl">
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="max-w-screen-2xl">
 	<div class="flex flex-col items-center justify-center gap-5 cta md:flex-row md:gap-32">
 			{#each slice.items as cta, index}
 			<PrismicLink field={cta.link_url}>{cta.link_label}</PrismicLink>

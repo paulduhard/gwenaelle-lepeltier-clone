@@ -34,20 +34,25 @@
 
 	<!-- contactPageHero -->
 	{:else if slice.variation === 'contactPageHero'}
-	<section class="flex flex-col items-center gap-6 mt-10 mb-6 hero">
-		<div class="flex-shrink w-52 hero-img">
+	<section class="flex flex-col items-center gap-6 mt-10 mb-6 md:items-end md:flex-row md:mx-20 max-w-screen-2xl hero">
+		<div class="flex-shrink md:basis-1/2 w-52 md:max-w-fit hero-img">
 			<PrismicImage field={slice.primary.image} />
 		</div>
-		<div class="mb-3 logo">
+		
+		<div class="flex flex-col gap-4 mb-8 md:mb-0 md:flex md:flex-col md:basis-1/2">
+		<div class="mb-3 md:justify-self-start logo">
 			<PrismicImage field={slice.primary.logo} />
-		</div>
-		<div class="flex flex-col items-center justify-center gap-5 cta md:flex-row md:gap-32">
-			{#each slice.items as cta, index}
-			<PrismicLink field={cta.link_url}>{cta.link_label}</PrismicLink>
-			{/each }
-		</div>
-		<div class="pl-4 border-l md:basis-1/2 md:pr-44 border-neutral-900">
-			<PrismicRichText field={slice.primary.description} />
+			</div>
+			<!-- CTA -->
+			<div class="flex flex-col items-center gap-4 mb-5 md:self-center cta md:flex-row md:gap-32">
+				{#each slice.items as cta, index}
+				<PrismicLink field={cta.link_url}>{cta.link_label}</PrismicLink>
+				{/each }
+			</div>
+			<!-- CTA -->
+			<div class="pl-4 border-l md:basis-1/2 md:pr-44 border-neutral-900">
+				<PrismicRichText field={slice.primary.description} />
+			</div>
 		</div>
 	</section>
 	{/if}

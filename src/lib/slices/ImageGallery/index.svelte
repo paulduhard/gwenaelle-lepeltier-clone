@@ -5,7 +5,7 @@
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="max-w-screen-2xl mb-28 md:mx-20">
+<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mb-10 max-w-screen-2xl md:mb-28 md:mx-20">
 	{#if slice.variation === 'default'}
 	<div class="">
 		<PrismicImage field={slice.primary.image} />

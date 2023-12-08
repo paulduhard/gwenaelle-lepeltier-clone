@@ -127,6 +127,25 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "galleryRepeater",
+      "name": "gallery-repeater",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
     }
   ]
 }

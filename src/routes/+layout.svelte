@@ -1,19 +1,20 @@
 <script>
+
 	import "../app.css";
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
 	import Nav from '$lib/components/Nav.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
-
+	
+	
 	let currentYear = new Date().getFullYear();
-  	let siteName = "Gwenaelle Lepeltier";
-
+	let siteName = "Gwenaelle Lepeltier";
+	
 	let open = false;
 
 	export let data;
 </script>
-
 
 <svelte:head>
 	<title>{$page.data.title}</title>

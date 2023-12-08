@@ -606,13 +606,42 @@ export type ImageGallerySlice4X = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *ImageGallery → Items*
+ */
+export interface ImageGallerySliceGalleryRepeaterItem {
+	/**
+	 * Image field in *ImageGallery → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.items[].image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * gallery-repeater variation for ImageGallery Slice
+ *
+ * - **API ID**: `galleryRepeater`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageGallerySliceGalleryRepeater = prismic.SharedSliceVariation<
+	'galleryRepeater',
+	Record<string, never>,
+	Simplify<ImageGallerySliceGalleryRepeaterItem>
+>;
+
+/**
  * Slice variation for *ImageGallery*
  */
 type ImageGallerySliceVariation =
 	| ImageGallerySliceDefault
 	| ImageGallerySlice2X
 	| ImageGallerySlice3X
-	| ImageGallerySlice4X;
+	| ImageGallerySlice4X
+	| ImageGallerySliceGalleryRepeater;
 
 /**
  * ImageGallery Shared Slice
@@ -751,11 +780,13 @@ declare module '@prismicio/client' {
 			ImageGallerySlice2XPrimary,
 			ImageGallerySlice3XPrimary,
 			ImageGallerySlice4XPrimary,
+			ImageGallerySliceGalleryRepeaterItem,
 			ImageGallerySliceVariation,
 			ImageGallerySliceDefault,
 			ImageGallerySlice2X,
 			ImageGallerySlice3X,
 			ImageGallerySlice4X,
+			ImageGallerySliceGalleryRepeater,
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceTextOnlyPrimary,

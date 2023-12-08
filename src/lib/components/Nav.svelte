@@ -73,4 +73,16 @@
 		border-bottom: 1px solid black;
 		}
 	}
+
+	/* styling specific for footer navigation */
+	:global(.footer-nav ul) {
+		flex-direction: column;
+		gap: .1rem;
+		padding-block: 0 !important;
+		align-items: flex-start !important;
+	}
+	:global(.footer-nav a) { display: inline-block; }
+	:global(.footer-nav a::first-letter) { text-transform: uppercase; }
+	:global(.footer-nav li a::after) { content: none; }
+	:global(.footer-nav li a:hover) { text-decoration: underline; }
 </style>

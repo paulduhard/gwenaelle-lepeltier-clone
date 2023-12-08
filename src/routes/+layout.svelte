@@ -73,23 +73,6 @@
 </section>
 
 <style>
-
-.footer-nav :global(ul) {
-		flex-direction: column;
-		gap: .1rem;
-		padding-block: 0 !important;
-		justify-content: flex-start !important;
-	}
-
-	/* Uppercase first-letters for footer navigation */
-	:global(.footer-nav a) { display: inline-block; }
-	:global(.footer-nav a::first-letter) { text-transform: uppercase; }
-	
-	.footer-nav :global(a:hover::after) {
-    width: 100%;
-	top: -5px;
-    }
-
 	/* Burger button */
 	:global(.hamburger) {
 		position: fixed;
@@ -117,4 +100,5 @@
 	font-size: .7rem;
 	font-weight: 300;
 	}
+	
 </style>

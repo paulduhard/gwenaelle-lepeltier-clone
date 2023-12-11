@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h1 {
+	font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+	/* clamp font-size */
+	font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h1,
+h2 {
+	font-family: "latienne-pro", serif;
+	font-style: italic;
+	font-weight: 400;
+	text-align: center;
+}
+
+p {
+	/* clamp font-size */
+	font-size: clamp(1rem, 2vw, 1.25rem);
+	margin-bottom: 1rem;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}

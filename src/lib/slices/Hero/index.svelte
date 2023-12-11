@@ -27,7 +27,7 @@
 			<div class="mb-7 md:basis-1/2 md:self-center">
 				<PrismicRichText field={slice.primary.title} />
 			</div>
-			<div class="pl-4 border-l md:basis-1/2 md:pr-28 lg:pr-44 border-neutral-900">
+			<div class="pl-4 border-l md:basis-1/2 md:pr-28 lg:pr-44 border-neutral-900 hero-description">
 				<PrismicRichText field={slice.primary.description} />
 			</div>
 		</section>
@@ -52,7 +52,7 @@
 				{/each }
 			</div> -->
 
-			<div class="pl-4 border-l md:pr-44 border-neutral-900">
+			<div class="pl-4 border-l md:pr-44 border-neutral-900 hero-description">
 				<PrismicRichText field={slice.primary.description} />
 			</div>
 		</div>
@@ -90,7 +90,7 @@
 	:global(a) {
 		/* font-size: 0.85rem; */
         position: relative;
-        text-decoration: none;
+        /* text-decoration: none; */
 	}
 
 	.cta :global(a::after) {
@@ -108,5 +108,10 @@
 	.hero :global(em) {
 		font-style: normal;
 		text-decoration: underline;
+	}
+
+	.hero-description :global(a) {
+		font-style: normal;
+		text-decoration: underline !important;
 	}
 </style>

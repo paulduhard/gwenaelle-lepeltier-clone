@@ -18,7 +18,14 @@ h2 {
 	font-style: italic;
 	font-weight: 400;
 	text-align: center;
-	margin-top: 8vh;
+}
+
+@media (max-width: 768px) {
+	h1,
+	h2 {
+		margin-top: 8vh;
+	}
+	
 }
 
 p {

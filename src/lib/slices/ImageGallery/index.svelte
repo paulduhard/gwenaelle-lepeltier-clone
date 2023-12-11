@@ -38,6 +38,9 @@
 	}
 	
 	/* 3 images */
+	.three_img :global(img) {
+		aspect-ratio: 16/9;
+	}
 	@media (max-width: 768px) {
 		.three_img :global(img:first-child) { grid-column: 1 / -1; }
 		.three_img :global(img) { aspect-ratio: 3/4; }

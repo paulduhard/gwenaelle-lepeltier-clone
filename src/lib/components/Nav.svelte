@@ -36,7 +36,7 @@
     bottom: 0;
     width: 0;
     transition: top .2s ease-in, bottom .2s ease-in;
-    border-bottom: 1px solid black;
+    border-bottom: 1.5px solid black;
     }
 
     li :global(a:hover::after) {
@@ -70,7 +70,7 @@
 		bottom: -5px;
 		width: 4rem;
 		transition: top .2s ease-in, bottom .2s ease-in;
-		border-bottom: 1px solid black;
+		border-bottom: 1.5px solid black;
 		}
 	}
 

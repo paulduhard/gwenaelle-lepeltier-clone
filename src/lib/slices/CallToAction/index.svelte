@@ -10,7 +10,7 @@
 
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="max-w-screen-2xl">
-	<div class="flex flex-col items-center justify-center gap-5 cta md:flex-row md:gap-32">
+	<div class="flex flex-col items-center justify-center gap-7 cta md:flex-row md:gap-32">
 			{#each slice.items as cta, index}
 			<PrismicLink field={cta.link_url}>{cta.link_label}</PrismicLink>
 			{/each }
@@ -29,10 +29,10 @@
     position: absolute;
 	left: 50%;
   	transform: translateX(-50%);
-	top: -4px;
-    bottom: -5px;
+	top: -7px;
+    bottom: -7px;
     width: 5rem;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
     }
  </style>

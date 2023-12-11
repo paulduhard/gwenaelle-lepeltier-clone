@@ -102,7 +102,7 @@
     bottom: -5px;
     width: 5rem;
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: 1.5px solid black;
     }
 
 	.hero :global(em) {

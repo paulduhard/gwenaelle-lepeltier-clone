@@ -7,7 +7,7 @@
 </script>
 
 {#if slice.variation === 'default'}
-<section class="mt-8 mb-6 richText richtext md:flex">
+<section class="mt-8 mb-6 richText richtext md:flex md:gap-3">
 	<div class="mb-7 h2 basis-1/2 md:self-center">
 		<PrismicRichText field={slice.primary.title} />
 	</div>

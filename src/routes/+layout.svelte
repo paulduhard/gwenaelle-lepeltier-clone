@@ -77,7 +77,7 @@
 	:global(.hamburger) {
 		position: fixed;
 		top: 0;
-		right: 2.3rem;
+		right: 1.7rem;
 		z-index: 100;
 	}
 	

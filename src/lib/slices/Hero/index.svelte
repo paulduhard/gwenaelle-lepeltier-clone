@@ -12,7 +12,7 @@
 			<PrismicImage field={slice.primary.image} />
 		</div>
 		<div class="justify-between mx-1 md:w-auto md:basis-1/2 md:flex md:flex-col" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-			<div class="mb-3 logo">
+			<div class="mb-5 logo">
 				<PrismicImage field={slice.primary.logo} />
 			</div>
 			<div class="md:pr-40">

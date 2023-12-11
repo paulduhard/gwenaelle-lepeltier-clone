@@ -53,11 +53,11 @@
 <PrismicPreview {repositoryName} />
 
 <section>
-	<footer class="flex flex-col items-center py-6 mt-20 border-t-2 md:mt-44 md:mx-auto md:px-24">
-		<a href="/">
-			<img src="/svg/logo-v3.svg" alt="logo" class="w-80 md:w-72">
+	<footer class="flex flex-col items-center px-5 py-5 mt-20 border-t-2 md:mt-44 md:mx-auto md:px-24">
+		<a href="/" class="mb-3">
+			<img src="/svg/logo-v3.svg" alt="logo" class="w-96 md:w-72">
 		</a>
-		<div class="flex gap-20">
+		<div class="flex justify-between w-full gap-20">
 			<div class="footer-nav">
 				<Nav links={data.nav.data.links} />
 			</div>

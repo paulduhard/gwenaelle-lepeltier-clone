@@ -55,7 +55,7 @@
 <section>
 	<footer class="flex flex-col items-center py-6 mt-20 border-t-2 md:mt-44 md:mx-auto md:px-24">
 		<a href="/">
-			<img src="/images/logo-couleur.png" alt="logo" class="w-72">
+			<img src="/svg/logo-v3.svg" alt="logo" class="w-80 md:w-72">
 		</a>
 		<div class="flex gap-20">
 			<div class="footer-nav">

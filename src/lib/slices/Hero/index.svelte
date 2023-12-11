@@ -84,7 +84,11 @@
 	}
 
 	:global(a) {
+<<<<<<< HEAD
 		/* font-size: 0.85rem; */
+=======
+		font-size: 0.85rem;
+>>>>>>> 8a8683122696fbec3d5a32d5a023332a0cba5c77
         position: relative;
         text-decoration: none;
 	}

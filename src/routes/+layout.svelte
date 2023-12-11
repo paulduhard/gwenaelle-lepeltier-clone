@@ -57,7 +57,7 @@
 		<a href="/" class="mb-3">
 			<img src="/svg/logo-v3.svg" alt="logo" class="w-96 md:w-72">
 		</a>
-		<div class="flex w-full gap-20 justify-evenly md:justify:center">
+		<div class="flex justify-between w-full md:gap-6 md:justify-center">
 			<div class="footer-nav">
 				<Nav links={data.nav.data.links} />
 			</div>

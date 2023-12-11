@@ -36,7 +36,7 @@
 	{:else if slice.variation === 'contactPageHero'}
 		<section class="grid items-center grid-cols-1 gap-6 mt-10 mb-6 md:mt-36 md:grid md:grid-cols-2 md:mx-20 max-w-screen-2xl md:mb-96 hero">
 
-		<div class="justify-self-center md:justify-self-end hero-img">
+		<div class="justify-self-center md:justify-self-end hero-contact-img">
 			<PrismicImage field={slice.primary.image} />
 		</div>
 		
@@ -62,19 +62,17 @@
 
 <style>
 	.hero :global(img) {
-		width: 200px;
 		object-fit: cover;
 	}
-
-	@media (min-width: 768px) {
-		.hero :global(img) {
-			width: 400px;
-		}
+	
+	.hero-contact-img :global(img) {
+		width: 200px;
 	}
 
 	
 	.hero-img :global(img) {
 		aspect-ratio: 5/7;
+		width: 100%;
 	}
 	
 	.logo :global(img) {

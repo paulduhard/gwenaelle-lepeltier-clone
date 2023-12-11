@@ -69,6 +69,12 @@
 		width: 200px;
 	}
 
+	@media (min-width: 768px) {
+		.hero-contact-img :global(img) {
+			width: 400px;
+		}
+	}
+	
 	
 	.hero-img :global(img) {
 		aspect-ratio: 5/7;

@@ -57,7 +57,7 @@
 		<a href="/" class="mb-3">
 			<img src="/svg/logo-v3.svg" alt="logo" class="w-96 md:w-72">
 		</a>
-		<div class="flex justify-between w-full gap-20">
+		<div class="flex justify-between w-full gap-20 md:justify:center">
 			<div class="footer-nav">
 				<Nav links={data.nav.data.links} />
 			</div>
@@ -97,7 +97,7 @@
 		}
 	}
 	footer :global(li), footer :global(p), footer :global(a) {
-	font-size: .7rem;
+	/* font-size: .9rem; */
 	font-weight: 300;
 	}
 	

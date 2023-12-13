@@ -7,26 +7,30 @@
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="mb-10 max-w-screen-2xl md:mb-28 md:mx-20">
 	{#if slice.variation === 'default'}
-	<div class="">
+	<div class="relative">
 		<PrismicImage field={slice.primary.image} />
+		<span class="absolute text-xs text-gray-500">{slice.primary.copyright}</span>
 	</div>
 	{:else if slice.variation === '2X'}
-	<div class="grid gap-3 mb-20 last:mb-5 two_img md:grid-flow-col">
+	<div class="relative grid gap-3 mb-20 last:mb-5 two_img md:grid-flow-col">
 		<PrismicImage field={slice.primary.image} />
 		<PrismicImage field={slice.primary.image2} />
+		<span class="absolute text-xs text-gray-500 -bottom-4">{slice.primary.copyright}</span>
 	</div>
 	{:else if slice.variation === '3X'}
-	<div class="grid grid-cols-2 gap-3 mb-20 last:mb-5 three_img md:grid-cols-3">
+	<div class="relative grid grid-cols-2 gap-3 mb-20 last:mb-5 three_img md:grid-cols-3">
 		<PrismicImage field={slice.primary.image} />
 		<PrismicImage field={slice.primary.image2} />
 		<PrismicImage field={slice.primary.image3} />
+		<span class="absolute text-xs text-gray-500 -bottom-4">{slice.primary.copyright}</span>
 	</div>
 	{:else if slice.variation === '4X'}
-	<div class="grid grid-cols-2 gap-3 mb-20 last:mb-5 four_img md:grid-cols-2">
-			<PrismicImage field={slice.primary.image} />
-			<PrismicImage field={slice.primary.image2} />
-			<PrismicImage field={slice.primary.image3} />
-			<PrismicImage field={slice.primary.image4} />
+	<div class="relative grid grid-cols-2 gap-3 mb-20 last:mb-5 four_img md:grid-cols-2">
+		<PrismicImage field={slice.primary.image} />
+		<PrismicImage field={slice.primary.image2} />
+		<PrismicImage field={slice.primary.image3} />
+		<PrismicImage field={slice.primary.image4} />
+		<span class="absolute text-xs text-gray-500 -bottom-4">{slice.primary.copyright}</span>
 	</div>
 	{/if}
 </section>

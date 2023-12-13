@@ -8,8 +8,9 @@
 
 {#if slice.variation === 'homepageHero'}
 	<section class="mt-10 mb-8 max-w-screen-2xl md:mb-20 md:mx-20 hero md:flex md:gap-4">
-		<div class="mb-6 mb:w-auto md:basis-1/2 md:mb-0 hero-img">
+		<div class="relative mb-6 mb:w-auto md:basis-1/2 md:mb-0 hero-img">
 			<PrismicImage field={slice.primary.image} />
+			<span class="absolute text-xs text-gray-500">{slice.primary.copyright}</span>
 		</div>
 		<div class="justify-between mx-1 md:w-auto md:basis-1/2 md:flex md:flex-col" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 			<div class="mb-5 logo">
@@ -36,8 +37,9 @@
 	{:else if slice.variation === 'contactPageHero'}
 		<section class="grid items-center grid-cols-1 gap-6 mt-10 mb-6 md:mt-36 md:grid md:grid-cols-2 md:mx-20 max-w-screen-2xl md:mb-96 hero">
 
-		<div class="justify-self-center md:justify-self-end hero-contact-img">
+		<div class="relative justify-self-center md:justify-self-end hero-contact-img">
 			<PrismicImage field={slice.primary.image} />
+			<span class="absolute text-xs text-gray-500">{slice.primary.copyright}</span>
 		</div>
 		
 		<div class="flex flex-col self-end h-full gap-16">

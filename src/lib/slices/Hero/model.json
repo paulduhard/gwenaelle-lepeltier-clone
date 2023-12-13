@@ -65,6 +65,13 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "copyright": {
+          "type": "Text",
+          "config": {
+            "label": "Copyright",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
@@ -100,6 +107,13 @@
             "label": "Image",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "copyright": {
+          "type": "Text",
+          "config": {
+            "label": "Copyright",
+            "placeholder": ""
           }
         }
       },

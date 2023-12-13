@@ -19,6 +19,13 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "copyright": {
+          "type": "Text",
+          "config": {
+            "label": "Copyright",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
@@ -45,6 +52,13 @@
             "label": "Image",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "copyright": {
+          "type": "Text",
+          "config": {
+            "label": "Copyright",
+            "placeholder": ""
           }
         }
       },
@@ -80,6 +94,13 @@
             "label": "Image3",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "copyright": {
+          "type": "Text",
+          "config": {
+            "label": "Copyright",
+            "placeholder": ""
           }
         }
       },
@@ -123,6 +144,13 @@
             "label": "Image4",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "copyright": {
+          "type": "Text",
+          "config": {
+            "label": "Copyright",
+            "placeholder": ""
           }
         }
       },

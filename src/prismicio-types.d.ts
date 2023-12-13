@@ -348,6 +348,16 @@ export interface HeroSectionSliceHomepageHeroPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
+
+	/**
+	 * Copyright field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.copyright
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	copyright: prismic.KeyTextField;
 }
 
 /**
@@ -396,6 +406,16 @@ export interface HeroSectionSliceContactPageHeroPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
+
+	/**
+	 * Copyright field in *Hero → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_section.primary.copyright
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	copyright: prismic.KeyTextField;
 }
 
 /**
@@ -466,6 +486,16 @@ export interface ImageGallerySliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
+
+	/**
+	 * Copyright field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.copyright
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	copyright: prismic.KeyTextField;
 }
 
 /**
@@ -504,6 +534,16 @@ export interface ImageGallerySlice2XPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image2: prismic.ImageField<never>;
+
+	/**
+	 * Copyright field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.copyright
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	copyright: prismic.KeyTextField;
 }
 
 /**
@@ -552,6 +592,16 @@ export interface ImageGallerySlice3XPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image3: prismic.ImageField<never>;
+
+	/**
+	 * Copyright field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.copyright
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	copyright: prismic.KeyTextField;
 }
 
 /**
@@ -610,6 +660,16 @@ export interface ImageGallerySlice4XPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image4: prismic.ImageField<never>;
+
+	/**
+	 * Copyright field in *ImageGallery → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_gallery.primary.copyright
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	copyright: prismic.KeyTextField;
 }
 
 /**

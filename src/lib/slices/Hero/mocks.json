@@ -88,6 +88,11 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"copyright": {
+				"__TYPE__": "FieldContent",
+				"value": "troops",
+				"type": "Text"
 			}
 		},
 		"items": [
@@ -157,6 +162,11 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"copyright": {
+				"__TYPE__": "FieldContent",
+				"value": "iron",
+				"type": "Text"
 			}
 		},
 		"items": [

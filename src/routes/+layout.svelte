@@ -63,7 +63,7 @@
 				<Nav links={data.nav.data.links} />
 			</div>
         <div class="mb-8 text-right infos-contact">
-	        <a href="https://www.google.com/maps/search/?api=1&query={data.settings.data.googlemap}" target="_blank" class="mb-1"><PrismicRichText field={data.settings.data.adress} /></a>
+	        <a href="https://www.google.com/maps/search/?api=1&query={data.settings.data.googlemap}" target="_blank" class="mb-1 hover:underline"><PrismicRichText field={data.settings.data.adress} /></a>
 			<a href="tel:{data.settings.data.telephone}" class="block telephone hover:underline">{data.settings.data.telephone}</a>
         </div>
     </div>

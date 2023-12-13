@@ -6,13 +6,11 @@
 	"status": true,
 	"json": {
 		"Infos": {
-			"adress": {
-				"type": "StructuredText",
+			"email": {
+				"type": "Text",
 				"config": {
-					"label": "Adress",
-					"placeholder": "",
-					"allowTargetBlank": true,
-					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+					"label": "E-mail",
+					"placeholder": ""
 				}
 			},
 			"telephone": {
@@ -22,10 +20,19 @@
 					"placeholder": ""
 				}
 			},
-			"email": {
+			"adress": {
+				"type": "StructuredText",
+				"config": {
+					"label": "Adress",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+				}
+			},
+			"googlemap": {
 				"type": "Text",
 				"config": {
-					"label": "E-mail",
+					"label": "GoogleMap",
 					"placeholder": ""
 				}
 			}

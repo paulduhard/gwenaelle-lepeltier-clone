@@ -144,15 +144,15 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
  */
 interface SettingsDocumentData {
 	/**
-	 * Adress field in *Settings*
+	 * E-mail field in *Settings*
 	 *
-	 * - **Field Type**: Rich Text
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: settings.adress
+	 * - **API ID Path**: settings.email
 	 * - **Tab**: Infos
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	adress: prismic.RichTextField;
+	email: prismic.KeyTextField;
 
 	/**
 	 * Téléphone field in *Settings*
@@ -166,15 +166,26 @@ interface SettingsDocumentData {
 	telephone: prismic.KeyTextField;
 
 	/**
-	 * E-mail field in *Settings*
+	 * Adress field in *Settings*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: settings.adress
+	 * - **Tab**: Infos
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	adress: prismic.RichTextField;
+
+	/**
+	 * GoogleMap field in *Settings*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: settings.email
+	 * - **API ID Path**: settings.googlemap
 	 * - **Tab**: Infos
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	email: prismic.KeyTextField /**
+	googlemap: prismic.KeyTextField /**
 	 * Logo Header field in *Settings*
 	 *
 	 * - **Field Type**: Image

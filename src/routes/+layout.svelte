@@ -6,6 +6,7 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Settings from '$lib/components/Settings.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
+	import { PrismicRichText, PrismicImage } from "@prismicio/svelte";
 
 	let currentYear = new Date().getFullYear();
   	let siteName = "Gwenaelle Lepeltier";
@@ -13,8 +14,10 @@
 	let open = false;
 
 	export let data;
-</script>
 
+
+	
+</script>
 
 <svelte:head>
 	<title>{$page.data.title}</title>
@@ -63,8 +66,7 @@
 				<Nav links={data.nav.data.links} />
 			</div>
         <div class="mb-8 text-right infos-contact">
-            <a href="/" class="block adresse">53 rue du Refuge,<br>13200 Arles</a>
-            <!-- <a href="/" class="block adresse"><Settings infos={data.settings.data.adress} /></a> -->
+	        <span><PrismicRichText field={data.settings.data.adress} /></span>
 			<a href="tel:{data.settings.data.telephone}" class="block telephone">{data.settings.data.telephone}</a>
         </div>
     </div>
@@ -99,7 +101,6 @@
 		}
 	}
 	footer :global(li), footer :global(p), footer :global(a) {
-	/* font-size: .9rem; */
 	font-weight: 300;
 	}
 	

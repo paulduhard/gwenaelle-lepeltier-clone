@@ -144,23 +144,12 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
  */
 interface SettingsDocumentData {
 	/**
-	 * Logo field in *Settings*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: settings.logo
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	logo: prismic.ImageField<never>;
-
-	/**
 	 * Adress field in *Settings*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: settings.adress
-	 * - **Tab**: Main
+	 * - **Tab**: Infos
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	adress: prismic.RichTextField;
@@ -171,21 +160,52 @@ interface SettingsDocumentData {
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: settings.telephone
-	 * - **Tab**: Main
+	 * - **Tab**: Infos
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	telephone: prismic.KeyTextField;
 
 	/**
-	 * email field in *Settings*
+	 * E-mail field in *Settings*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: settings.email
-	 * - **Tab**: Main
+	 * - **Tab**: Infos
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	email: prismic.KeyTextField;
+	email: prismic.KeyTextField /**
+	 * Logo Header field in *Settings*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: settings.logo_header
+	 * - **Tab**: Logo(s)
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */;
+	logo_header: prismic.ImageField<never>;
+
+	/**
+	 * Logo Footer field in *Settings*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: settings.logo_footer
+	 * - **Tab**: Logo(s)
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo_footer: prismic.ImageField<never>;
+
+	/**
+	 * Logo Hero field in *Settings*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: settings.logo_hero
+	 * - **Tab**: Logo(s)
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo_hero: prismic.ImageField<never>;
 }
 
 /**

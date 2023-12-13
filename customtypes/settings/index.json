@@ -5,15 +5,7 @@
 	"repeatable": false,
 	"status": true,
 	"json": {
-		"Main": {
-			"logo": {
-				"type": "Image",
-				"config": {
-					"label": "Logo",
-					"constraint": {},
-					"thumbnails": []
-				}
-			},
+		"Infos": {
 			"adress": {
 				"type": "StructuredText",
 				"config": {
@@ -33,8 +25,34 @@
 			"email": {
 				"type": "Text",
 				"config": {
-					"label": "email",
+					"label": "E-mail",
 					"placeholder": ""
+				}
+			}
+		},
+		"Logo(s)": {
+			"logo_header": {
+				"type": "Image",
+				"config": {
+					"label": "Logo Header",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"logo_footer": {
+				"type": "Image",
+				"config": {
+					"label": "Logo Footer",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"logo_hero": {
+				"type": "Image",
+				"config": {
+					"label": "Logo Hero",
+					"constraint": {},
+					"thumbnails": []
 				}
 			}
 		}

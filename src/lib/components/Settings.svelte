@@ -3,6 +3,7 @@
 
 	/** @type {import('../../prismicio-types').SettingsDocumentData['settings']} */
 	export let data;
+
 </script>
 
 <style>

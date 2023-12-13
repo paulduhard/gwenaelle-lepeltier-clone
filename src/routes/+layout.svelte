@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
 	import Nav from '$lib/components/Nav.svelte';
-	import Settings from '$lib/components/Settings.svelte';
+	// import Settings from '$lib/components/Settings.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
 	import { PrismicRichText, PrismicImage } from "@prismicio/svelte";
 
@@ -14,10 +14,6 @@
 	let open = false;
 
 	export let data;
-
-	console.log(data);
-	
-	
 </script>
 
 <svelte:head>

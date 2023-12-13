@@ -4,6 +4,7 @@
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
 	import Nav from '$lib/components/Nav.svelte';
+	import Settings from '$lib/components/Settings.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
 
 	let currentYear = new Date().getFullYear();
@@ -62,8 +63,9 @@
 				<Nav links={data.nav.data.links} />
 			</div>
         <div class="mb-8 text-right infos-contact">
-            <a class="block adresse">53 rue du Refuge,<br>13200 Arles</a>
-			<a href="" class="block telephone">06 87 27 97 93</a>
+            <a href="/" class="block adresse">53 rue du Refuge,<br>13200 Arles</a>
+            <!-- <a href="/" class="block adresse"><Settings infos={data.settings.data.adress} /></a> -->
+			<a href="tel:{data.settings.data.telephone}" class="block telephone">{data.settings.data.telephone}</a>
         </div>
     </div>
 	<div class="text-xs footer__copyright">

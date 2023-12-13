@@ -166,15 +166,15 @@ interface SettingsDocumentData {
 	adress: prismic.RichTextField;
 
 	/**
-	 * Phone field in *Settings*
+	 * Téléphone field in *Settings*
 	 *
-	 * - **Field Type**: Number
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: settings.phone
+	 * - **API ID Path**: settings.telephone
 	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#number
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	phone: prismic.NumberField;
+	telephone: prismic.KeyTextField;
 
 	/**
 	 * email field in *Settings*

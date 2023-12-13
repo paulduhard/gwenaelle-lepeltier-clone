@@ -8,7 +8,12 @@ export async function load() {
 
     const nav = await client.getSingle('nav');
 
+    const settings = await client.getSingle('settings')
+    
     return {
-        nav
+        nav,
+        settings,
     };
+
+    
 }

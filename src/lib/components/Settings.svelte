@@ -1,15 +1,9 @@
 <script>
-	import { PrismicRichText } from "@prismicio/svelte";
+	import { PrismicRichText, PrismicImage } from "@prismicio/svelte";
 
-	/** @type {import('../../prismicio-types').SettingsDocumentData['adress']} */
+	/** @type {import('../../prismicio-types').SettingsDocumentData['settings']} */
 	export let data;
 </script>
-
-    <div>
-        <PrismicImage field={data.logo} />
-        <PrismicRichText field={data.adress} />
-        {data.phone}
-    </div>
 
 <style>
 

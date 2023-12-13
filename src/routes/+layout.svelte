@@ -68,8 +68,8 @@
 			<a href="tel:{data.settings.data.telephone}" class="block telephone hover:underline">{data.settings.data.telephone}</a>
         </div>
     </div>
-	<div class="text-xs footer__copyright">
-		©{currentYear} {siteName} | tous droits réservés | <a href="/mentions-legales" class="text-xs hover:underline">mentions légales</a>
+	<div class="text-[.55rem] md:text-xs footer__copyright">
+		©{currentYear} {siteName} | tous droits réservés | <a href="/mentions-legales" class="text-[.55rem] md:text-xs hover:underline">mentions légales</a>
 	  </div>
 </footer>
 </section>

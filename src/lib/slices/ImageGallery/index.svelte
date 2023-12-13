@@ -12,27 +12,33 @@
 		<span class="absolute text-xs text-gray-500">{slice.primary.copyright}</span>
 	</div>
 	{:else if slice.variation === '2X'}
-	<div class="relative grid gap-3 mb-20 last:mb-5 two_img md:grid-flow-col">
-		<PrismicImage field={slice.primary.image} />
-		<PrismicImage field={slice.primary.image2} />
-		<span class="absolute text-xs text-gray-500 -bottom-4">{slice.primary.copyright}</span>
+	<div class="relative">
+		<div class="grid gap-3 mb-20 last:mb-5 two_img md:grid-flow-col">
+			<PrismicImage field={slice.primary.image} />
+			<PrismicImage field={slice.primary.image2} />
+			<span class="absolute text-xs text-gray-500 -bottom-4">{slice.primary.copyright}</span>
+		</div>
 	</div>
 	{:else if slice.variation === '3X'}
-	<div class="relative grid grid-cols-2 gap-3 mb-20 last:mb-5 three_img md:grid-cols-3">
-		<PrismicImage field={slice.primary.image} />
-		<PrismicImage field={slice.primary.image2} />
-		<PrismicImage field={slice.primary.image3} />
-		<span class="absolute text-xs text-gray-500 -bottom-4">{slice.primary.copyright}</span>
+	<div class="relative">
+		<div class="grid grid-cols-2 gap-3 mb-20 last:mb-5 three_img md:grid-cols-3">
+			<PrismicImage field={slice.primary.image} />
+			<PrismicImage field={slice.primary.image2} />
+			<PrismicImage field={slice.primary.image3} />
+			<span class="absolute text-xs text-gray-500 -bottom-4">{slice.primary.copyright}</span>
+		</div>
 	</div>
 	{:else if slice.variation === '4X'}
-	<div class="relative grid grid-cols-2 gap-3 mb-20 last:mb-5 four_img md:grid-cols-2">
-		<PrismicImage field={slice.primary.image} />
-		<PrismicImage field={slice.primary.image2} />
-		<PrismicImage field={slice.primary.image3} />
-		<PrismicImage field={slice.primary.image4} />
+	<div class="relative">
+		<div class="grid grid-cols-2 gap-3 mb-20 last:mb-5 four_img md:grid-cols-2">
+			<PrismicImage field={slice.primary.image} />
+			<PrismicImage field={slice.primary.image2} />
+			<PrismicImage field={slice.primary.image3} />
+			<PrismicImage field={slice.primary.image4} />
+		</div>
 		<span class="absolute text-xs text-gray-500 -bottom-4">{slice.primary.copyright}</span>
 	</div>
-	{/if}
+		{/if}
 </section>
 
 <style>

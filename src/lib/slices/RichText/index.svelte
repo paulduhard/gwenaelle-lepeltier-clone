@@ -30,7 +30,7 @@
 />
 </div>
 {:else if slice.variation === 'textLeft'}
-<div class="mt-8 mb-6 md:text-left md:px-48">
+<div class="mt-8 mb-6 md:text-left md:px-24">
 	<PrismicRichText
 	field={slice.primary.content}
 	components={{

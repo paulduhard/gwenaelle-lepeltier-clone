@@ -10,7 +10,6 @@
 
 	let currentYear = new Date().getFullYear();
   	let siteName = "Gwenaelle Lepeltier";
-
 	let open = false;
 
 	export let data;

@@ -14,8 +14,6 @@
 	let open = false;
 
 	export let data;
-
-
 	
 </script>
 
@@ -66,8 +64,8 @@
 				<Nav links={data.nav.data.links} />
 			</div>
         <div class="mb-8 text-right infos-contact">
-	        <span><PrismicRichText field={data.settings.data.adress} /></span>
-			<a href="tel:{data.settings.data.telephone}" class="block telephone">{data.settings.data.telephone}</a>
+	        <p class="mb-1"><PrismicRichText field={data.settings.data.adress} /></p>
+			<a href="tel:{data.settings.data.telephone}" class="block telephone hover:underline">{data.settings.data.telephone}</a>
         </div>
     </div>
 	<div class="text-xs footer__copyright">
@@ -99,9 +97,6 @@
 		.desktop-nav {
 			display: none;
 		}
-	}
-	footer :global(li), footer :global(p), footer :global(a) {
-	font-weight: 300;
 	}
 	
 </style>

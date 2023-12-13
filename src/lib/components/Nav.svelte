@@ -17,14 +17,6 @@
 </nav>
 
 <style>
-	li :global(a) {
-        position: relative;
-        text-decoration: none;
-		text-transform: lowercase;
-		font-size: 1rem;
-		font-weight: 300;
-		}
-
 	li :global(a:hover) {
         text-decoration: none;
 	}

@@ -29,6 +29,15 @@
 	}}
 />
 </div>
+{:else if slice.variation === 'textLeft'}
+<div class="mt-8 mb-6 md:text-left md:px-48">
+	<PrismicRichText
+	field={slice.primary.content}
+	components={{
+		label: Label
+	}}
+/>
+</div>
 {/if}
 
 <style>

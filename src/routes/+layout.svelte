@@ -69,7 +69,7 @@
         </div>
     </div>
 	<div class="text-xs footer__copyright">
-		©{currentYear} {siteName} | tous droits réservés
+		©{currentYear} {siteName} | tous droits réservés | <a href="/mentions-legales" class="text-xs hover:underline">mentions légales</a>
 	  </div>
 </footer>
 </section>

@@ -721,9 +721,37 @@ export type RichTextSliceTextOnly = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *RichText → Primary*
+ */
+export interface RichTextSliceTextLeftPrimary {
+	/**
+	 * Content field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: Lorem ipsum...
+	 * - **API ID Path**: rich_text.primary.content
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	content: prismic.RichTextField;
+}
+
+/**
+ * textLeft variation for RichText Slice
+ *
+ * - **API ID**: `textLeft`
+ * - **Description**: RichText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RichTextSliceTextLeft = prismic.SharedSliceVariation<
+	'textLeft',
+	Simplify<RichTextSliceTextLeftPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *RichText*
  */
-type RichTextSliceVariation = RichTextSliceDefault | RichTextSliceTextOnly;
+type RichTextSliceVariation = RichTextSliceDefault | RichTextSliceTextOnly | RichTextSliceTextLeft;
 
 /**
  * RichText Shared Slice
@@ -779,9 +807,11 @@ declare module '@prismicio/client' {
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceTextOnlyPrimary,
+			RichTextSliceTextLeftPrimary,
 			RichTextSliceVariation,
 			RichTextSliceDefault,
-			RichTextSliceTextOnly
+			RichTextSliceTextOnly,
+			RichTextSliceTextLeft
 		};
 	}
 }

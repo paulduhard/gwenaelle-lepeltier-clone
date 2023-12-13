@@ -33,7 +33,7 @@
 
 <header class="sticky top-0 z-10 grid w-full px-5 py-4 bg-white md:mx-auto max-2xl:border-b max-w-screen-2xl md:flex md:items-center md:justify-between md:px-20">
 		<a href="/">
-			<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72">
+			<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
 		</a>
 		<!-- Display burger-button on mobile -->
 		<button class="md:hidden">

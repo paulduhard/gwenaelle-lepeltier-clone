@@ -91,7 +91,7 @@
         position: relative;
 	}
 
-	.cta :global(a::after) {
+	/* .cta :global(a::after) {
     content: "";
     position: absolute;
 	left: 50%;
@@ -101,7 +101,7 @@
     width: 5rem;
     border-top: 1px solid black;
     border-bottom: 1.5px solid black;
-    }
+    } */
 
 	.hero :global(em) {
 		font-style: normal;

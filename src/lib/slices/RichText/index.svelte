@@ -32,9 +32,5 @@
 {/if}
 
 <style>
-		@media (min-width: 768px) {
-		.hero :global(h2) {
-			font-size: 3rem;
-		}
-	}
+
 </style>

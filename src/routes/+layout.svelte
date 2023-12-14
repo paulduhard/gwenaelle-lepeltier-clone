@@ -11,13 +11,8 @@
 	let currentYear = new Date().getFullYear();
   	let siteName = "Gwenaelle Lepeltier";
 	let open = false;
-	// let color = $page.data.color;
 	
 	export let data;
-	
-	console.log(data.document[0].data.color);
-	// console.log($page.data);
-	
 
 </script>
 
@@ -36,19 +31,11 @@
 </svelte:head>
 
 <header class="sticky top-0 z-10 grid w-full px-5 py-4 bg-white md:mx-auto max-2xl:border-b max-w-screen-2xl md:flex md:items-center md:justify-between md:px-20">
-		<!-- {#if $page.data.color === true} -->
 		<a href="/">
-			<img src="/svg/logo-v2.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
-		</a>
-		<!-- Display burger-button on mobile -->
-			<Hamburger bind:open />
-		<!-- {:else if $page.data.page.data.color === false} -->
-		<a href="/">
-			<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
+			<img src="/svg/logo-{data.page.data.color === true ? 'v2' : 'v1'}.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
 		</a>
 		<!-- Display burger-button on mobile -->
 		<Hamburger bind:open />
-		<!-- {/if} -->
 		<!-- Display on desktop only -->
 		<nav class="desktop-nav">
 			<Nav links={data.nav.data.links} />
